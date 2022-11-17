@@ -1,8 +1,21 @@
-<?php /** @var Array $data */ ?>
+<?php ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <script src="https://kit.fontawesome.com/a3762f05b2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="w3-display-container" id="home">
+  <img src="/public/images/doggy.jpg" class="theme-image" alt="theme">
 
-<header class=" w3-display-container" id="home">
-  <img src="/App/Views/Img/doggy.jpg" class="theme-image" alt="theme">
-  <!--
+<!--
   <div class="w3-display-left w3-text-white" style="padding:48px">
     <span class="w3-jumbo w3-hide-small responsive">Start something that matters</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium responsive">Start something that matters</span><br>
@@ -19,7 +32,6 @@
   </div>
   -->
 </header>
-
 
 <!-- Promo Section - "We know design" -->
 <div class="w3-container w3-light-grey promo1">
@@ -81,3 +93,5 @@
     </div>
   </div>
 </div>
+</body>
+</html>

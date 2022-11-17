@@ -1,3 +1,4 @@
+<?php ?>
 <!-- About Section -->
 <div class="w3-container sectionpadding" id="about">
     <h1 class="w3-center title">about our project</h1>

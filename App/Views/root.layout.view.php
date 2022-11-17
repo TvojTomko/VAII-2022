@@ -1,11 +1,10 @@
 <?php
-/** @var Array $data */
-use App\Config\Configuration;
-
+/** @var string $contentHTML */
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><?= Configuration::APP_NAME ?></title>
+    <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -22,7 +21,7 @@ use App\Config\Configuration;
         <a href="?c=home" class="button-logo mygrey-text">LOGO will be here</a>
         <!-- Right-sided navbar links -->
         <div class="w3-right w3-hide-small">
-            <a href="?c=home&a=about" class="button-menu mygrey-text"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
+            <a href="?c=Home&a=about" class="button-menu mygrey-text"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
             <a href="?c=home&a=clubs" class="button-menu mygrey-text"><i class="fa-solid fa-paw"></i> CLUBS</a>
             <a href="?c=home&a=contact" class="button-menu mygrey-text"><i class="fa-solid fa-address-card"></i> CONTACT</a>
             <a href="?c=auth&a=login" class="button-menu mygrey-text"><i class="fa-sharp fa-solid fa-key"></i> LOGIN</a>
@@ -43,6 +42,10 @@ use App\Config\Configuration;
     <a href="Home/contact.view.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-address-card"></i> CONTACT</a>
     <a href="Auth/login.view.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-sharp fa-solid fa-key"></i> LOGIN</a>
 </nav>
+
+<div class="">
+        <?= $contentHTML ?>
+</div>
 
 <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
 <footer class="classic-text center-text mygrey-bg">

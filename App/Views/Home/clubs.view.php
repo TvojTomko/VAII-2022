@@ -1,3 +1,4 @@
+<?php /** @var Array $data */ ?>
 <!-- Catalog Section -->
 <div class="w3-container sectionpadding" id="work">
     <h1 class="w3-center title">our certificated breed clubs </h1>

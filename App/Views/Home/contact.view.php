@@ -1,3 +1,4 @@
+<?php /** @var Array $data */ ?>
 <!-- Contact Section -->
 <div class="w3-container sectionpadding" id="contact">
     <h1 class="title">CONTACT</h1>
