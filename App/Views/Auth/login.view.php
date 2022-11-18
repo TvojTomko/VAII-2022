@@ -12,6 +12,6 @@
         <button class="w3-button w3-black w3-section" type="submit">
             <i class="fa fa-paper-plane"></i> LOG IN
         </button>
-        <a href="register.view.php" class="right register">Not have an account? Register now</a>
+        <a href="?c=auth&a=register" class="right register">Not have an account? Register now</a>
     </form>
 </div>
