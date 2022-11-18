@@ -126,20 +126,35 @@ footer {
     text-decoration: none;
 }
 
-.button-footer:hover {
-    border-style: solid;
-    border-width: 2px;
-    border-color: #00CC00;
-}
-
 .sm-opacity:hover {
     color: #00CC00;
     transition: 0.3s;
 }
 
-.register{
+.button-footer {
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 4px 0;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.button-footer:hover {
+    border: 2px solid #00CC00;
+    font-weight: 800;
+    background-color: white;
+    color: #00CC00;
+    margin: 0;
+}
+
+.register {
     padding-top: 25px;
     text-decoration: none;
+}
+
+.register:hover {
+    color: #00CC00;
 }
 
 .image {
@@ -192,4 +207,7 @@ footer {
 
 .labels {
     margin-bottom: 10px;
+}
+.loginform {
+    margin-bottom: 100px;
 }

@@ -13,9 +13,6 @@
     <link rel="stylesheet" href="/checkpoint2/public/css/style.css">
     <script src="https://kit.fontawesome.com/a3762f05b2.js" crossorigin="anonymous"></script>
     <script src="/checkpoint2/public/js/script.js"></script>
-    <style>
-
-    </style>
 </head>
 <body>
 
@@ -53,7 +50,7 @@
 
 <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
 <footer class="classic-text center-text mygrey-bg">
-    <a href="Home/index.view.php" class="button-menu button-footer mygrey-text"><i class="fa-solid fa-house home-icon"></i>HOME</a>
+    <a href="Home/index.view.php" class="button-footer mygrey-text"><i class="fa-solid fa-house home-icon"></i>HOME</a>
     <div class="w3-xlarge w3-section">
         <p class="footer-text">Created by Tomas Sobek</p>
         <i class="fa fa-facebook-official sm-opacity"></i>
