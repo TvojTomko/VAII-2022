@@ -1,6 +1,6 @@
 <?php /** @var Array $data */ ?>
 <!-- Catalog Section -->
-<div class="w3-container sectionpadding" id="work">
+<div class="w3-container section" id="work">
     <h1 class="w3-center title">our certificated breed clubs </h1>
     <p class="w3-center w3-large">List of all clubs</p>
 

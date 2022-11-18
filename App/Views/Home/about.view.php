@@ -1,6 +1,6 @@
 <?php ?>
 <!-- About Section -->
-<div class="w3-container sectionpadding" id="about">
+<div class="w3-container section" id="about">
     <h1 class="title">about our project</h1>
     <p class="w3-center w3-large">Key features of our project</p>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
@@ -28,7 +28,7 @@
 </div>
 
 <!-- Team Section -->
-<div class="w3-container" style="padding:128px 16px" id="team">
+<div class="w3-container section" id="team">
     <h3 class="w3-center">THE TEAM</h3>
     <p class="w3-center w3-large">The ones who runs this company</p>
     <div class="w3-row-padding w3-grayscale" style="margin-top:64px">

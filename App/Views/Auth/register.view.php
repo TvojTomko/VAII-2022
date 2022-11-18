@@ -1,6 +1,6 @@
 <?php ?>
 <!-- Login Section -->
-<div class="w3-container sectionpadding" id="login">
+<div class="w3-container section" id="login">
   <h1 class="title">Register</h1>
   <p class="center-text">Create a new account</p>
   <form target="_blank" class="contactform">

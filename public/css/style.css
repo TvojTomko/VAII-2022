@@ -192,10 +192,6 @@ footer {
     height: auto;
 }
 
-.sectionpadding {
-    padding-top: 100px;
-}
-
 .rows {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -208,6 +204,7 @@ footer {
 .labels {
     margin-bottom: 10px;
 }
-.loginform {
+.section {
+    margin-top: 100px;
     margin-bottom: 100px;
 }
