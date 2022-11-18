@@ -1,7 +1,7 @@
 <?php ?>
 
 <header class="w3-display-container" id="home">
-  <img src="../../../public/images/doggy.jpg" class="theme-image" alt="theme">
+  <img src="/checkpoint2/public/images/doggy.jpg" class="theme-image" alt="theme">
 </header>
 
 <!-- Promo Section - "We know design" -->
@@ -13,7 +13,7 @@
       <p><a href="?c=Home&a=clubs" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
     </div>
     <div class="w3-col m6">
-      <img class="w3-image w3-round-large responsive" src="img/dogs-family.jpg" alt="Buildings">
+      <img class="w3-image w3-round-large responsive" src="/checkpoint2/public/images/dogs-family.jpg" alt="dogs-family">
     </div>
   </div>
 </div>
