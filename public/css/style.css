@@ -204,6 +204,7 @@ footer {
 .labels {
     margin-bottom: 10px;
 }
+
 .section {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -232,4 +233,5 @@ footer {
 .breedclub {
     margin-bottom: 30px;
     border: 1px solid;
+    padding-bottom: 10px;
 }
