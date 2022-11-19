@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Config\Configuration;
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
+use App\Models\User;
 
 /**
  * Class AuthController
@@ -13,45 +14,123 @@ use App\Core\Responses\Response;
  */
 class AuthController extends AControllerBase
 {
-    /**
-     *
-     * @return \App\Core\Responses\RedirectResponse|\App\Core\Responses\Response
-     */
-    public function index(): Response
+
+    public function loginpage()
     {
-        return $this->redirect(Configuration::LOGIN_URL);
+        return $this->html(
+            [
+                'error' => $this->request()->getValue('error')
+            ]
+        );
     }
 
-    /**
-     * Login a user
-     * @return \App\Core\Responses\RedirectResponse|\App\Core\Responses\ViewResponse
-     */
     public function login(): Response
     {
-        $formData = $this->app->getRequest()->getPost();
-        $logged = null;
-        if (isset($formData['submit'])) {
-            $logged = $this->app->getAuth()->login($formData['login'], $formData['password']);
-            if ($logged) {
-                return $this->redirect('?c=admin');
+        $login = $this->request()->getValue('username');
+        $password = $this->request()->getValue('password');
+
+        $logged = Auth::login($login, $password);
+
+        if ($logged) {
+            $this->redirectcontroller('home', 'index', ['success' => 'Logged in successful']);
+        } else {
+            $this->redirectcontroller('auth', 'loginpage', ['error'=> 'Wrong login name or password']);
+        }
+    }
+
+    public function registerpage()
+    {
+        return $this->html(
+            [
+                'error' => $this->request()->getValue('error')
+            ]
+        );
+    }
+
+    public function register()
+    {
+        $newUser = new User();
+
+        $email=$this->request()->getValue('email');
+        $username= $this->request()->getValue('username');
+
+        if (!User::getAll('email = ?', [$email])) {
+            if (!User::getAll('username = ?', [$username])) {
+
+                $newUser->setEmail($this->request()->getValue('email'));
+                $newUser->setUsername($this->request()->getValue('username'));
+                $newUser->setPassword($this->request()->getValue('password'));
+
+                $newUser->save();
+                $this->redirectcontroller('home', 'index', ['success' => 'User was created']);
+
+            } else {
+                $this->redirectcontroller('auth', 'registerpage', ['error'=> 'Username is used by another member']);
             }
+        } else {
+            $this->redirectcontroller('auth', 'registerpage', ['error'=> 'Email is used by another member']);
+        }
+    }
+
+    public function changepasswordpage()
+    {
+        return $this->html(
+            [
+                'error' => $this->request()->getValue('error')
+            ]
+        );
+    }
+
+    public function changepassword() {
+
+        $name = $_SESSION["name"];
+
+        $user = User::getAll('username = ?', [$name]);
+        //$oldpassword = User::getAll('password = ?', 'user = $name');
+        $usernew = $user[0];
+        $newpassword = $this->request()->getValue('newpassword');
+        $repeatpassword = $this->request()->getValue('repeatpassword');
+        //if ($newpassword != $oldpassword )
+        if ($newpassword == $repeatpassword)
+        {
+            $usernew->setPassword($newpassword);
+            $usernew->save();
+
+            $this->redirect('home', 'index', ['success' => 'Your password was changed']);
+        } else {
+            $this->redirect('auth', 'changepasswordpage', ['error' => 'Your new passwords doesnt match']);
         }
 
-        $data = ($logged === false ? ['message' => 'Zlý login alebo heslo!'] : []);
-        return $this->html($data);
     }
 
-    /**
-     * Logout a user
-     * @return \App\Core\Responses\ViewResponse
-     */
-    public function logout(): Response
+    public function deleteuserpage()
     {
-        $this->app->getAuth()->logout();
-        return $this->html();
+        return $this->html(
+            []
+        );
     }
 
-    public function register(): Response
+    public function deleteuser()
+    {
+        $name = $_SESSION["name"];
+
+        $user = User::getAll('username = ?', [$name]);
+        $usernew = $user[0];
+        $usernew->delete();
+
+        unset($_SESSION['name']);
+        session_destroy();
+
+        $this->redirect('home', 'index', ['success' => 'User was deleted']);
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        $this->redirect('home', 'index', ['success' => 'Successful logout']);
+    }
+
+    public function index(): Response
     {
         return $this->html();
     }

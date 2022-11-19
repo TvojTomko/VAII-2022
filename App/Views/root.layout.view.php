@@ -15,7 +15,6 @@
     <script src="/checkpoint2/public/js/script.js"></script>
 </head>
 <body>
-
 <!-- Navbar -->
 <div class="w3-top">
     <div class="w3-bar w3-white w3-card" id="menu">
@@ -25,7 +24,7 @@
             <a href="?c=Home&a=about" class="button-menu mygrey-text"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
             <a href="?c=Home&a=clubs" class="button-menu mygrey-text"><i class="fa-solid fa-dog"></i> CLUBS</a>
             <a href="?c=Home&a=contact" class="button-menu mygrey-text"><i class="fa-solid fa-address-card"></i> CONTACT</a>
-            <a href="?c=Auth&a=login" class="button-menu mygrey-text"><i class="fa-sharp fa-solid fa-key"></i> LOGIN</a>
+            <a href="?c=Auth&a=loginpage" class="button-menu mygrey-text"><i class="fa-sharp fa-solid fa-key"></i> LOGIN</a>
         </div>
 
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -41,7 +40,7 @@
     <a href="Home/about.view.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
     <a href="Home/clubs.view.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-paw"></i> CLUBS</a>
     <a href="Home/contact.view.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-address-card"></i> CONTACT</a>
-    <a href="Auth/login.view.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-sharp fa-solid fa-key"></i> LOGIN</a>
+    <a href="Auth/loginpage.view.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-sharp fa-solid fa-key"></i> LOGIN</a>
 </nav>
 
 <div class="">

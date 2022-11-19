@@ -104,9 +104,24 @@ abstract class AControllerBase
         return true;
     }
 
+    public function redirectcontroller($controller, $action = "", $params = [])
+    {
+        $location = "Location: ?c=$controller";
+        if ($action != "") {
+
+            $location .= "&a=$action";
+        }
+        foreach ($params as $name => $value) {
+
+            $location .= "&$name=" . urlencode($value);
+        }
+        header($location);
+    }
+
     /**
      * Every controller should implement the method for index action at least
      * @return Response
      */
     public abstract function index(): Response;
+
 }

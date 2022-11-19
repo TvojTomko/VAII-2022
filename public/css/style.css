@@ -255,6 +255,10 @@ footer {
     padding: 5px 10px;
 }
 
+.login-line {
+    margin: 5px 0;
+}
+
 @media screen and (max-width: 1200px) {
     .club-text-section {
         padding-top: 10px;

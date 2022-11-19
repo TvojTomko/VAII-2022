@@ -1,13 +1,17 @@
+<?php
+
+?>
+
 <!-- Login Section -->
 <div class="w3-container section" id="login">
     <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Login</h1>
-    <p class="center-text">Please type your email and password or create a new account</p>
-    <form target="_blank" class="contactform">
+    <p class="center-text">Please type your email and password or register a new account</p>
+    <form class="contactform" method="post" action="?c=Auth&a=login">
         <label>
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            <input class="w3-input w3-border login-line" type="text" placeholder="Username" required name="username">
         </label>
         <label>
-            <input class="w3-input w3-section w3-border" type="text" placeholder="Password" required name="Password">
+            <input class="w3-input w3-border login-line" type="text" placeholder="Password" required name="password">
         </label>
         <button class="button-menu mygrey-text login-button" type="submit">
             <i class="fa fa-paper-plane"></i> LOG IN

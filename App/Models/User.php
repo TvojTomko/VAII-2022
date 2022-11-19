@@ -4,11 +4,11 @@ namespace App\Models;
 
 use App\Core\Model;
 
-class Loginfo extends Model
+class User extends Model
 {
     public $id;
     public $email;
-    public $nickname;
+    public $username;
     public $password;
 
     /**
@@ -46,17 +46,17 @@ class Loginfo extends Model
     /**
      * @return mixed
      */
-    public function getNickname()
+    public function getUsername()
     {
-        return $this->nickname;
+        return $this->username;
     }
 
     /**
-     * @param mixed $nickname
+     * @param mixed $username
      */
-    public function setNickname($nickname): void
+    public function setUsername($username): void
     {
-        $this->nickname = $nickname;
+        $this->username = $username;
     }
 
     /**
