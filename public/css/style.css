@@ -117,7 +117,7 @@ footer {
 .button-menu {
     background-color: #FFFFFF;
     border: none;
-    padding: 10px 15px;
+    padding: 10px 8px;
     margin: 5px 5px;
     text-align: center;
     font-size: 18px;
@@ -207,4 +207,26 @@ footer {
 .section {
     margin-top: 100px;
     margin-bottom: 100px;
+}
+
+.breedclub-name {
+    font-family: "Raleway", sans-serif;
+    font-size: 30px;
+    padding-left: 15px;
+}
+
+.gallery-picture {
+    display: inline-block;
+}
+
+.club-text-section {
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+.breedclub {
+    margin-bottom: 30px;
+    border: 1px solid;
 }

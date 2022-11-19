@@ -18,10 +18,10 @@
 
 <!-- Navbar -->
 <div class="w3-top">
-    <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <div class="w3-bar w3-white w3-card" id="menu">
         <a href="?c=Home" class="button-logo mygrey-text">LOGO will be here</a>
         <!-- Right-sided navbar links -->
-        <div class="w3-right w3-hide-small">
+        <div class="right w3-hide-small">
             <a href="?c=Home&a=about" class="button-menu mygrey-text"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
             <a href="?c=Home&a=clubs" class="button-menu mygrey-text"><i class="fa-solid fa-paw"></i> CLUBS</a>
             <a href="?c=Home&a=contact" class="button-menu mygrey-text"><i class="fa-solid fa-address-card"></i> CONTACT</a>
