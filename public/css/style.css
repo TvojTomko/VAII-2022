@@ -214,6 +214,8 @@ footer {
     font-family: "Raleway", sans-serif;
     font-size: 30px;
     padding-left: 15px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .gallery-picture {
@@ -234,4 +236,12 @@ footer {
     margin-bottom: 30px;
     border: 1px solid;
     padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1035px) {
+.club-text-section {
+    padding-top: 10px;
+    font-size: 17px;
+    margin-left: -10px;
+}
 }
