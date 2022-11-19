@@ -1,11 +1,11 @@
 <?php ?>
 <!-- About Section -->
 <div class="w3-container section" id="about">
-    <h1 class="title"><i class="fa-solid fa-paw"></i><br>About our project</h1>
+    <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>About our project</h1>
     <p class="w3-center w3-large">Key features of our project</p>
-    <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-row-padding w3-center section">
         <div class="w3-quarter">
-            <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+            <i class="fa-solid fa-bone w3-margin-bottom w3-jumbo"></i>
             <p class="w3-large">Responsive</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
         </div>
@@ -15,12 +15,12 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
         </div>
         <div class="w3-quarter">
-            <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+            <i class="fa-sharp fa-solid fa-shield-dog w3-margin-bottom w3-jumbo"></i>
             <p class="w3-large">Design</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
         </div>
         <div class="w3-quarter">
-            <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+            <i class="fa-solid fa-house-medical w3-margin-bottom w3-jumbo w3-center"></i>
             <p class="w3-large">Support</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
         </div>
@@ -30,8 +30,8 @@
 <!-- Team Section -->
 <div class="w3-container section" id="team">
     <h3 class="w3-center">THE TEAM</h3>
-    <p class="w3-center w3-large">The ones who runs this company</p>
-    <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <p class="w3-center w3-large">The ones who create this idea</p>
+    <div class="w3-row-padding w3-grayscale section">
         <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-card">
                 <img src="https://www.w3schools.com/w3images/team2.jpg" alt="John" style="width:100%">

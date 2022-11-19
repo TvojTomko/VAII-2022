@@ -1,7 +1,7 @@
 <?php /** @var Array $data */ ?>
 <!-- Catalog Section -->
 <div class="w3-container section" id="work">
-    <h1 class="w3-center title"><i class="fa-solid fa-paw"></i><br>our certificated breed clubs</h1>
+    <h1 class="w3-center title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Our certificated breed clubs</h1>
     <div class="w3-container">
         <p class="w3-center w3-large">List of all clubs</p>
 
