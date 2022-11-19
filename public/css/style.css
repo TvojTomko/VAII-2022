@@ -117,7 +117,7 @@ footer {
 .button-menu {
     background-color: #FFFFFF;
     border: none;
-    padding: 10px 8px;
+    padding: 10px 10px;
     margin: 5px 5px;
     text-align: center;
     font-size: 18px;
@@ -236,6 +236,11 @@ footer {
     margin-bottom: 30px;
     border: 1px solid;
     padding-bottom: 10px;
+}
+
+.login-button {
+    margin-left: -1px;
+    padding: 5px 10px;
 }
 
 @media screen and (max-width: 1200px) {

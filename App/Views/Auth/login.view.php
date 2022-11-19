@@ -9,7 +9,7 @@
         <label>
             <input class="w3-input w3-section w3-border" type="text" placeholder="Password" required name="Password">
         </label>
-        <button class="button-menu mygrey-text" type="submit">
+        <button class="button-menu mygrey-text login-button" type="submit">
             <i class="fa fa-paper-plane"></i> LOG IN
         </button>
         <a href="?c=auth&a=register" class="right register">Not have an account? Register now</a>
