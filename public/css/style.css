@@ -217,6 +217,9 @@ footer {
 
 .gallery-picture {
     display: inline-block;
+    width: 700px;
+    height: 400px;
+    object-fit: cover;
 }
 
 .club-text-section {
