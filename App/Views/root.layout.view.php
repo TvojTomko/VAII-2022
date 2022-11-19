@@ -1,5 +1,8 @@
 <?php
 /** @var string $contentHTML */
+
+use App\Controllers\Auth;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +27,18 @@
             <a href="?c=Home&a=about" class="button-menu mygrey-text"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
             <a href="?c=Home&a=clubs" class="button-menu mygrey-text"><i class="fa-solid fa-dog"></i> CLUBS</a>
             <a href="?c=Home&a=contact" class="button-menu mygrey-text"><i class="fa-solid fa-address-card"></i> CONTACT</a>
-            <a href="?c=Auth&a=loginpage" class="button-menu mygrey-text"><i class="fa-sharp fa-solid fa-key"></i> LOGIN</a>
+            <?php if(!Auth::isLogged()) { ?>
+                <a href="?c=auth&a=loginpage" class="button-menu mygrey-text"><i class="fa fa-key mvr"></i> LOGIN</a>
+            <?php } else { ?>
+                <div class="dropdown">
+                    <a onclick="myFunction()" class="dropbtn button-menu mygrey-text"><i class="fas fa-user-cog mvr"></i> ACCOUNT</a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="?c=auth&a=changepasswordpage" class="button-menu mygrey-text"><i class="fas fa-edit mvr"></i> CHANGE PASSWORD</a>
+                        <a href="?c=auth&a=deleteuserpage" class="button-menu mygrey-text"><i class="fas fa-user-minus mvr"></i> DELETE USER</a>
+                        <a href="?c=auth&a=logout" class="button-menu mygrey-text"><i class="fas fa-user-lock mvr"></i> LOGOUT</a>
+                    </div>
+                </div>
+            <?php } ?>
         </div>
 
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -60,7 +74,24 @@
         <i class="fa-brands fa-tiktok sm-opacity"></i>
     </div>
 </footer>
+<script>
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
 
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
 <script>
     var mySidebar = document.getElementById("mySidebar");
     function w3_open() {
