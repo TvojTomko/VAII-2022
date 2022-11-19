@@ -23,7 +23,7 @@
         <!-- Right-sided navbar links -->
         <div class="right w3-hide-small">
             <a href="?c=Home&a=about" class="button-menu mygrey-text"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
-            <a href="?c=Home&a=clubs" class="button-menu mygrey-text"><i class="fa-solid fa-paw"></i> CLUBS</a>
+            <a href="?c=Home&a=clubs" class="button-menu mygrey-text"><i class="fa-solid fa-dog"></i> CLUBS</a>
             <a href="?c=Home&a=contact" class="button-menu mygrey-text"><i class="fa-solid fa-address-card"></i> CONTACT</a>
             <a href="?c=Auth&a=login" class="button-menu mygrey-text"><i class="fa-sharp fa-solid fa-key"></i> LOGIN</a>
         </div>

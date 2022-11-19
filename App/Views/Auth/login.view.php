@@ -1,6 +1,6 @@
 <!-- Login Section -->
 <div class="w3-container section" id="login">
-    <h1 class="title">Login</h1>
+    <h1 class="title"><i class="fa-solid fa-paw"></i><br>Login</h1>
     <p class="center-text">Please type your email and password or create a new account</p>
     <form target="_blank" class="contactform">
         <label>

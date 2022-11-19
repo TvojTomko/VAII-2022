@@ -1,7 +1,7 @@
 <?php /** @var Array $data */ ?>
 <!-- Contact Section -->
 <div class="w3-container section" id="contact">
-    <h1 class="title">CONTACT</h1>
+    <h1 class="title"><i class="fa-solid fa-paw"></i><br>Contact</h1>
     <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
     <div>
         <div class="center center-text">

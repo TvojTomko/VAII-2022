@@ -1,7 +1,7 @@
 <?php ?>
 <!-- About Section -->
 <div class="w3-container section" id="about">
-    <h1 class="title">about our project</h1>
+    <h1 class="title"><i class="fa-solid fa-paw"></i><br>About our project</h1>
     <p class="w3-center w3-large">Key features of our project</p>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
         <div class="w3-quarter">

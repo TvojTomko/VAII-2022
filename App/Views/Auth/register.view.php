@@ -1,7 +1,7 @@
 <?php ?>
 <!-- Login Section -->
 <div class="w3-container section" id="login">
-  <h1 class="title">Register</h1>
+  <h1 class="title"><i class="fa-solid fa-paw"></i><br>Register</h1>
   <p class="center-text">Create a new account</p>
   <form target="_blank" class="contactform">
     <label>
