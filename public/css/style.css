@@ -148,6 +148,18 @@ footer {
     margin: 0;
 }
 
+.index-text {
+    font-size: 20px;
+}
+
+.index-title {
+    font-size: 50px;
+}
+
+.index-center {
+    margin-top: 150px;
+}
+
 .register {
     padding-top: 25px;
     text-decoration: none;
@@ -179,7 +191,7 @@ footer {
 }
 
 .promo1 {
-    padding:128px 16px;
+    padding:50px 16px;
 }
 
 .promo2 {

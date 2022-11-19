@@ -7,8 +7,8 @@
 <!-- Promo Section - "We know design" -->
 <div class="w3-container w3-light-grey promo1">
   <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>We know design.</h3>
+    <div class="w3-col m6 index-text index-center">
+      <h3 class="index-title">We know design.</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
       <p><a href="?c=Home&a=clubs" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
     </div>
@@ -39,13 +39,13 @@
 </div>
 
 <!-- Skills Section -->
-<div class="w3-container w3-light-grey w3-padding-64 section">
+<div class="w3-container w3-light-grey w3-padding-64">
   <div class="w3-row-padding">
     <div class="w3-col m6">
-      <h3>Our Skills.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-        tempor incididunt ut labore et dolore.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      <h3 class="index-title">Our Skills.</h3>
+      <p class="index-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+        tempor incididunt ut labore et dolore.<br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
         tempor incididunt ut labore et dolore.</p>
     </div>
     <div class="w3-col m6">
