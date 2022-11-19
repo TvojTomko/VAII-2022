@@ -228,7 +228,7 @@ footer {
 .club-text-section {
     display: inline-block;
     padding-left: 10px;
-    font-size: 20px;
+    font-size: 17px;
     margin-top: -10px;
 }
 
@@ -238,10 +238,17 @@ footer {
     padding-bottom: 10px;
 }
 
-@media screen and (max-width: 1035px) {
-.club-text-section {
-    padding-top: 10px;
-    font-size: 17px;
-    margin-left: -10px;
+@media screen and (max-width: 1200px) {
+    .club-text-section {
+        padding-top: 10px;
+        font-size: 15px;
+        margin-left: -10px;
 }
+    .gallery-picture {
+        width: 350px;
+        height: 200px;
+    }
+    .breedclub-name {
+        font-size: 20px;
+    }
 }
