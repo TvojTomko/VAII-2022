@@ -112,13 +112,13 @@ class AuthController extends AControllerBase
 
     public function deleteuser()
     {
-        $name = $_SESSION["name"];
+        $name = $_SESSION['name'];
 
         $user = User::getAll('username = ?', [$name]);
         $usernew = $user[0];
         $usernew->delete();
 
-        unset($_SESSION['username']);
+        unset($_SESSION['name']);
         session_destroy();
 
         $this->redirectcontroller('home', 'index', ['success' => 'User was deleted']);

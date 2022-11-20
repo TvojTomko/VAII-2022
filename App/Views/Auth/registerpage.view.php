@@ -1,7 +1,7 @@
 <?php /** @var Array $data */ ?>
 
 <!-- REGISTER section -->
-<div class="w3-container w3-light-grey" id="register">
+<div class="w3-container section" id="register">
     <h3 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>REGISTER</h3>
     <p class="center-text">Create your account</p>
     <div>
@@ -21,7 +21,7 @@
                 <input class="w3-input w3-border login-line" type="password" placeholder="Password" name="password" required>
             </label>
                 <button class="button-menu mygrey-text login-button" type="submit">
-                    <i class="fa fa-paper-plane"></i>Register
+                    <i class="fa fa-paper-plane"></i> Register
                 </button>
         </form>
     </div>

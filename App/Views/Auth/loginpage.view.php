@@ -23,6 +23,6 @@
         <button class="button-menu mygrey-text login-button" type="submit">
             <i class="fa fa-paper-plane"></i> LOG IN
         </button>
-        <a href="?c=auth&a=register" class="right register">Not have an account? Register now</a>
+        <a href="?c=auth&a=registerpage" class="right register">Not have an account? Register now</a>
     </form>
 </div>
