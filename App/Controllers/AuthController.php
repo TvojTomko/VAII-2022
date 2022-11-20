@@ -83,7 +83,7 @@ class AuthController extends AControllerBase
 
     public function changepassword() {
 
-        $name = $_SESSION["name"];
+        $name = $_SESSION["username"];
 
         $user = User::getAll('username = ?', [$name]);
         //$oldpassword = User::getAll('password = ?', 'user = $name');
@@ -96,9 +96,9 @@ class AuthController extends AControllerBase
             $usernew->setPassword($newpassword);
             $usernew->save();
 
-            $this->redirect('home', 'index', ['success' => 'Your password was changed']);
+            $this->redirectcontroller('home', 'index', ['success' => 'Your password was changed']);
         } else {
-            $this->redirect('auth', 'changepasswordpage', ['error' => 'Your new passwords doesnt match']);
+            $this->redirectcontroller('auth', 'changepasswordpage', ['error' => 'Your new passwords doesnt match']);
         }
 
     }
@@ -118,16 +118,16 @@ class AuthController extends AControllerBase
         $usernew = $user[0];
         $usernew->delete();
 
-        unset($_SESSION['name']);
+        unset($_SESSION['username']);
         session_destroy();
 
-        $this->redirect('home', 'index', ['success' => 'User was deleted']);
+        $this->redirectcontroller('home', 'index', ['success' => 'User was deleted']);
     }
 
     public function logout()
     {
         Auth::logout();
-        $this->redirect('home', 'index', ['success' => 'Successful logout']);
+        $this->redirectcontroller('home', 'index', ['success' => 'Successful logout']);
     }
 
     public function index(): Response
