@@ -114,7 +114,7 @@ class AuthController extends AControllerBase
     {
         $name = $_SESSION['name'];
 
-        $user = User::getAll('username = ?', [$name]);
+        $user = User::getAll('username = ?', $name);
         $usernew = $user[0];
         $usernew->delete();
 

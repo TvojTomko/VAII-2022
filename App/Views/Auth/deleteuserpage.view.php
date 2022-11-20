@@ -1,7 +1,7 @@
 <?php /** @var Array $data */ ?>
 
 <!-- LOGIN section -->
-<div class="w3-container w3-light-grey section" id="delete">
+<div class="w3-container section" id="deleteuser">
     <div>
         <h3 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>DELETE USER</h3>
         <form class="contactform center-text" method="post" action="?c=auth&a=deleteuser">

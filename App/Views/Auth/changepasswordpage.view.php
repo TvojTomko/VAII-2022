@@ -7,7 +7,7 @@
 <?php } ?>
 
 <!-- LOGIN section -->
-<div class="w3-container" id="contact">
+<div class="w3-container section" id="changepasswd">
     <h3 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Change password</h3>
     <div>
         <form class="contactform" method="post" action="?c=Auth&a=changepassword">

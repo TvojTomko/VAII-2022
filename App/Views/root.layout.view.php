@@ -31,11 +31,11 @@ use App\Controllers\Auth;
                 <a href="?c=auth&a=loginpage" class="button-menu mygrey-text"><i class="fa fa-key mvr"></i> LOGIN</a>
             <?php } else { ?>
                 <div class="dropdown">
-                    <a onclick="myFunction()" class="dropbtn button-menu mygrey-text"><i class="fas fa-user-cog mvr"></i> ACCOUNT</a>
+                    <a onclick="myFunction()" class="dropbtn account-button"><i class="fas fa-user-cog mvr"></i> ACCOUNT</a>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="?c=auth&a=changepasswordpage" class="button-menu mygrey-text"><i class="fas fa-edit mvr"></i> CHANGE PASSWORD</a>
-                        <a href="?c=auth&a=deleteuserpage" class="button-menu mygrey-text"><i class="fas fa-user-minus mvr"></i> DELETE USER</a>
-                        <a href="?c=auth&a=logout" class="button-menu mygrey-text"><i class="fas fa-user-lock mvr"></i> LOGOUT</a>
+                        <a href="?c=auth&a=changepasswordpage" class="dropmenubtn"><i class="fas fa-edit mvr"></i> CHANGE PASSWORD</a>
+                        <a href="?c=auth&a=deleteuserpage" class="dropmenubtn"><i class="fas fa-user-minus mvr"></i> DELETE USER</a>
+                        <a href="?c=auth&a=logout" class="dropmenubtn"><i class="fas fa-user-lock mvr"></i> LOGOUT</a>
                     </div>
                 </div>
             <?php } ?>
