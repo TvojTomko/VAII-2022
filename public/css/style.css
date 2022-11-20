@@ -315,4 +315,17 @@ footer {
     .breedclub-name {
         font-size: 20px;
     }
+    .doggyimg {
+        margin-top: 50px;
+    }
+    .smallscreen-index {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .index-text {
+        font-size: 15px;
+    }
+    .index-title {
+        font-size: 40px;
+    }
 }
