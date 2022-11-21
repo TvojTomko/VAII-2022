@@ -1,8 +1,11 @@
 <?php
 /** @var string $contentHTML */
+/** @var string $username  */
+
 
 use App\Controllers\Auth;
 
+$username = Auth::getName();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +37,7 @@ use App\Controllers\Auth;
                 <div class="dropdown">
                     <a onclick="myFunction()" class="dropbtn account-button"><i class="fas fa-user-cog mvr"></i> ACCOUNT</a>
                     <div id="myDropdown" class="dropdown-content">
+                        <a class="dropmenubtn center-text"><?php echo $username ?></a>
                         <a href="?c=auth&a=changepasswordpage" class="dropmenubtn"><i class="fas fa-edit mvr"></i> CHANGE PASSWORD</a>
                         <a href="?c=auth&a=deleteuserpage" class="dropmenubtn"><i class="fas fa-user-minus mvr"></i> DELETE USER</a>
                         <a href="?c=auth&a=logout" class="dropmenubtn"><i class="fas fa-user-lock mvr"></i> LOGOUT</a>
