@@ -65,10 +65,10 @@ class AuthController extends AControllerBase
                 $this->redirectcontroller('home', 'index', ['success' => 'User was created']);
 
             } else {
-                $this->redirectcontroller('auth', 'registerpage', ['error'=> 'Username is used by another member']);
+                $this->redirectcontroller('auth', 'registerpage', ['error'=> 'Username is already used by another member']);
             }
         } else {
-            $this->redirectcontroller('auth', 'registerpage', ['error'=> 'Email is used by another member']);
+            $this->redirectcontroller('auth', 'registerpage', ['error'=> 'Email is already used by another member']);
         }
     }
 
@@ -106,7 +106,9 @@ class AuthController extends AControllerBase
     public function deleteuserpage()
     {
         return $this->html(
-            []
+            [
+                'error' => $this->request()->getValue('error')
+            ]
         );
     }
 
