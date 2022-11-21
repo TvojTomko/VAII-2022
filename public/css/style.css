@@ -301,7 +301,12 @@ footer {
     background-color: #303030;
     color: #00CC00;
 }
-
+.errortext {
+    font-size: 17px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
 
 @media screen and (max-width: 1200px) {
     .club-text-section {

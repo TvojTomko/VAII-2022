@@ -16,6 +16,7 @@ use App\Controllers\Auth;
     <link rel="stylesheet" href="/checkpoint2/public/css/style.css">
     <script src="https://kit.fontawesome.com/a3762f05b2.js" crossorigin="anonymous"></script>
     <script src="/checkpoint2/public/js/script.js"></script>
+    <script src="/checkpoint2/public/js/validation.js"></script>
 </head>
 <body>
 <!-- Navbar -->

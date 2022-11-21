@@ -10,7 +10,7 @@
                 <?= $data['error'] ?>
             </div>
         <?php } ?>
-        <form class="contactform" method="post" action="?c=Auth&a=register">
+        <form name="registerForm" class="contactform" method="post" action="?c=Auth&a=register" onsubmit="return validateForm()">
             <label>
                 <input class="w3-input w3-border login-line" type="email" placeholder="Email" name="email" required>
             </label>
