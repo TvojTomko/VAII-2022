@@ -55,8 +55,8 @@ body, html {
 }
 
 .contactform {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 35%;
+    padding-right: 35%;
 }
 
 .title {
@@ -161,7 +161,7 @@ footer {
 }
 
 .register {
-    padding-top: 25px;
+    padding-top: 5px;
     text-decoration: none;
 }
 
@@ -302,6 +302,7 @@ footer {
     color: #00CC00;
 }
 
+
 @media screen and (max-width: 1200px) {
     .club-text-section {
         padding-top: 10px;
@@ -327,5 +328,11 @@ footer {
     }
     .index-title {
         font-size: 40px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .contactform {
+        padding-left: 25%;
+        padding-right: 25%;
     }
 }

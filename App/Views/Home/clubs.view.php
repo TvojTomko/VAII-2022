@@ -9,7 +9,7 @@
         <div class="w3-container breedclub">
             <div class="breedclub-name">Name of breed club</div>
             <div class="w3-container gallery-text-section left">
-                <img src="/checkpoint2/public/images/bernese-mountain-family.png" class="responsive left gallery-picture">
+                <img src="/checkpoint2/public/images/breedclubs/bernese-mountain-family.png" class="responsive left gallery-picture">
                 <div class="club-text-section">
                         Name of owner:
                         <br>
@@ -26,7 +26,7 @@
         <div class="w3-container breedclub">
             <div class="breedclub-name">Name of breed club</div>
             <div class="w3-container gallery-text-section left">
-                <img src="/checkpoint2/public/images/chowchow-family.jpg" class="responsive left gallery-picture">
+                <img src="/checkpoint2/public/images/breedclubs/chowchow-family.jpg" class="responsive left gallery-picture">
                 <div class="club-text-section">
                         Name of owner:
                         <br>

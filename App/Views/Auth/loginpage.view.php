@@ -14,7 +14,7 @@
     <?php } ?>
 
     <form class="contactform" method="post" action="?c=Auth&a=login">
-        <label>
+        <label class="login-label">
             <input class="w3-input w3-border login-line" type="text" placeholder="Username" required name="username">
         </label>
         <label>
