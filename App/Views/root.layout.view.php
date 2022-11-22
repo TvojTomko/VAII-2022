@@ -40,6 +40,7 @@ $username = Auth::getName();
                         <a class="dropmenubtn center-text"><?php echo $username ?></a>
                         <a href="?c=auth&a=changepasswordpage" class="dropmenubtn"><i class="fas fa-edit mvr"></i> CHANGE PASSWORD</a>
                         <a href="?c=auth&a=deleteuserpage" class="dropmenubtn"><i class="fas fa-user-minus mvr"></i> DELETE USER</a>
+                        <a href="" class="dropmenubtn"><i class=""></i> EDIT</a>
                         <a href="?c=auth&a=logout" class="dropmenubtn"><i class="fas fa-user-lock mvr"></i> LOGOUT</a>
                     </div>
                 </div>
