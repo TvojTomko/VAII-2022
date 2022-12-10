@@ -50,4 +50,9 @@ class HomeController extends AControllerBase
     {
         return $this->html();
     }
+
+    public function shows(): Response
+    {
+        return $this->html();
+    }
 }
