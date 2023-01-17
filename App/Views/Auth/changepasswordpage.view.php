@@ -9,7 +9,7 @@
         </div>
     <?php } ?>
     <div>
-        <form name="changepasswdForm" class="contactform" method="post" action="?c=Auth&a=changepassword">
+        <form name="changepasswdForm" class="contactform" method="post" action="?c=Auth&a=changepassword" onsubmit="return validateChanPassForm()">
             <label>
                 <input class="w3-input w3-border login-line" type="password" placeholder="New password" name="newpassword" required>
             </label>

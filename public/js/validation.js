@@ -104,3 +104,18 @@ function validateLogin(pLoginForm){
         return true;
     }
 }
+
+function validateChanPassForm(){
+    let passwordValid=validatePassword(document.forms["changepasswdForm"]["newpassword"]);
+    let msg="";
+
+    if(passwordValid===false) {
+
+        if(!passwordValid){
+            msg+="Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters!\n";
+        }
+        alert(msg)
+        return false;
+    }
+    return true;
+}
