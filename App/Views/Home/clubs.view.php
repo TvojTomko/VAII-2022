@@ -43,7 +43,7 @@
         <div class="w3-container breedclub">
             <div class="breedclub-name">Name of breed club</div>
             <div class="w3-container gallery-text-section left">
-                <img src="/checkpoint2/public/images/newfoundland-family.jpg" class="responsive left gallery-picture">
+                <img src="/checkpoint2/public/images/breedclubs/newfoundland-family.jpg" class="responsive left gallery-picture">
                 <div class="club-text-section">
                         Name of owner:
                         <br>
