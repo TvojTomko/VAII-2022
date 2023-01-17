@@ -41,7 +41,6 @@ $username = Auth::getName();
                         <a class="dropmenubtn center-text"><?php echo $username ?></a>
                         <a href="?c=auth&a=changepasswordpage" class="dropmenubtn"><i class="fas fa-edit mvr"></i> CHANGE PASSWORD</a>
                         <a href="?c=auth&a=deleteuserpage" class="dropmenubtn"><i class="fas fa-user-minus mvr"></i> DELETE USER</a>
-                        <a href="" class="dropmenubtn"><i class=""></i> EDIT</a>
                         <a href="?c=auth&a=logout" class="dropmenubtn"><i class="fas fa-user-lock mvr"></i> LOGOUT</a>
                     </div>
                 </div>
@@ -58,10 +57,19 @@ $username = Auth::getName();
 <!-- Mobile menu -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-    <a href="Home/about.view.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
-    <a href="Home/clubs.view.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-paw"></i> CLUBS</a>
-    <a href="Home/contact.view.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-address-card"></i> CONTACT</a>
-    <a href="Auth/loginpage.view.php" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-sharp fa-solid fa-key"></i> LOGIN</a>
+    <a href="?c=Home&a=about" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
+    <a href="?c=Home&a=clubs" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-paw"></i> CLUBS</a>
+    <a href="?c=Home&a=contact" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-address-card"></i> CONTACT</a>
+    <a href="?c=Home&a=shows" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-address-card"></i> SHOWS</a>
+    <?php if(!Auth::isLogged()) { ?>
+    <a href="?c=auth&a=loginpage" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-sharp fa-solid fa-key"></i> LOGIN</a>
+    <?php } else { ?>
+    <br>
+        <a onclick="w3_close()" class="w3-bar-item w3-button"><?php echo $username ?></a>
+        <a href="?c=auth&a=changepasswordpage" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-edit mvr"></i> CHANGE PASSWORD</a>
+        <a href="?c=auth&a=deleteuserpage" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-user-minus mvr"></i> DELETE USER</a>
+        <a href="?c=auth&a=logout" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-user-lock mvr"></i> LOGOUT</a>
+    <?php } ?>
 </nav>
 
 <div>
@@ -70,7 +78,7 @@ $username = Auth::getName();
 
 <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
 <footer class="classic-text center-text mygrey-bg">
-    <a href="Home/index.view.php" class="button-footer mygrey-text"><i class="fa-solid fa-house home-icon"></i>HOME</a>
+    <a href="?c=Home" class="button-footer mygrey-text"><i class="fa-solid fa-house home-icon"></i>HOME</a>
     <div class="w3-xlarge w3-section">
         <p class="footer-text">Created by Tomas Sobek</p>
         <i class="fa fa-facebook-official sm-opacity"></i>

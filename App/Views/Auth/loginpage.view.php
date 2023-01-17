@@ -18,7 +18,7 @@
             <input class="w3-input w3-border login-line" type="text" placeholder="Username" required name="username">
         </label>
         <label>
-            <input class="w3-input w3-border login-line" type="text" placeholder="Password" required name="password">
+            <input class="w3-input w3-border login-line" type="password" placeholder="Password" required name="password">
         </label>
         <button class="button-menu mygrey-text login-button" type="submit">
             <i class="fa fa-paper-plane"></i> LOG IN

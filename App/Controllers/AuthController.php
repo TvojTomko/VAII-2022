@@ -86,23 +86,19 @@ class AuthController extends AControllerBase
         $name = $_SESSION["username"];
 
         $user = User::getAll('username = ?', [$name]);
-        //$oldpassword = User::getAll('password = ?', [$_SESSION['username']]);
         $usernew = $user[0];
         $newpassword = $this->request()->getValue('newpassword');
         $repeatpassword = $this->request()->getValue('repeatpassword');
-        //if ($newpassword != $oldpassword ) {
             if ($newpassword == $repeatpassword) {
                 $usernew->setPassword($newpassword);
                 $usernew->save();
 
+                Auth::logout();
                 $this->redirectcontroller('home', 'index', ['success' => 'Your password was changed']);
             } else {
                 $this->redirectcontroller('auth', 'changepasswordpage', ['error' => 'Your new passwords doesnt match']);
             }
         }
-        //else {
-        // $this->redirectcontroller('auth', 'changepasswordpage', ['error' => 'Your new password is equal to your old password']);
-        //}
 
     public function deleteuserpage()
     {
