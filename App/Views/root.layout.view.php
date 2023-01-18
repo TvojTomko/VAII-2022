@@ -31,7 +31,7 @@ $username = Auth::getName();
             <a href="?c=Home&a=about" class="button-menu mygrey-text"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
             <a href="?c=Home&a=clubs" class="button-menu mygrey-text"><i class="fa-solid fa-dog"></i> CLUBS</a>
             <a href="?c=Home&a=contact" class="button-menu mygrey-text"><i class="fa-solid fa-address-card"></i> CONTACT</a>
-            <a href="?c=Home&a=shows" class="button-menu mygrey-text">SHOWS</a>
+            <a href="?c=Home&a=shows" class="button-menu mygrey-text"><i class="fas fa-star"></i> SHOWS</a>
             <?php if(!Auth::isLogged()) { ?>
                 <a href="?c=auth&a=loginpage" class="button-menu mygrey-text"><i class="fa fa-key mvr"></i> LOGIN</a>
             <?php } else { ?>
@@ -60,7 +60,7 @@ $username = Auth::getName();
     <a href="?c=Home&a=about" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
     <a href="?c=Home&a=clubs" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-paw"></i> CLUBS</a>
     <a href="?c=Home&a=contact" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-address-card"></i> CONTACT</a>
-    <a href="?c=Home&a=shows" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-address-card"></i> SHOWS</a>
+    <a href="?c=Home&a=shows" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-star"></i> SHOWS</a>
     <?php if(!Auth::isLogged()) { ?>
     <a href="?c=auth&a=loginpage" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-sharp fa-solid fa-key"></i> LOGIN</a>
     <?php } else { ?>

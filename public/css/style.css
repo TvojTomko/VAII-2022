@@ -341,3 +341,20 @@ footer {
         padding-right: 25%;
     }
 }
+.shows {
+    border: 1px black solid;
+    padding: 15px 10px 30px;
+    margin-bottom: 30px;
+}
+.shows_text {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.logo {
+    width: 100px;
+    height: 100px;
+    float: left;
+    position: relative;
+    margin-right: 10px;
+}

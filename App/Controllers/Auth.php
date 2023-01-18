@@ -34,4 +34,12 @@ class Auth
     {
         return (Auth::isLogged() ? $_SESSION['username'] : "");
     }
+
+    public static function isAdmin()
+    {
+        if (isset($_SESSION['username']) && $_SESSION['username'] === 'admin')
+            return true;
+
+        return false;
+    }
 }

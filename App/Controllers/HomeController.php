@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
+use App\Models\Show;
 
 /**
  * Class HomeController
@@ -53,6 +54,7 @@ class HomeController extends AControllerBase
 
     public function shows(): Response
     {
-        return $this->html();
+        $shows = Show::getAll();
+        return $this->html($shows);
     }
 }

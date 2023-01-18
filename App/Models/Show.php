@@ -6,10 +6,10 @@ use App\Core\Model;
 
 class Show extends Model
 {
-    public $id;
-    public $title;
-    public $location;
-    public $date;
+    protected $id;
+    protected $title;
+    protected $location;
+    protected $date;
 
     /**
      * @return mixed
