@@ -15,7 +15,7 @@ class ShowController extends AControllerBase
         return $this->html($shows);
     }
 
-    public function add() : Response
+    public function createshows() : Response
     {
         $data = $this->request()->getPost();
 
@@ -62,13 +62,5 @@ class ShowController extends AControllerBase
         }
 
         return $this->redirect("?c=home");
-    }
-
-    public function edit() : Response
-    {
-        $id = $this->request()->getValue("id");
-        $post = Show::getOne($id);
-        $data = $this->request()->getPost();
-        return $this->html($post,"edit");
     }
 }

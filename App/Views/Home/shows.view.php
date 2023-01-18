@@ -17,11 +17,13 @@ $username = Auth::getName()
                     <br>
                     <label class="shows_text">Date:</label> <?=$item->getDate()?>
                     <?php if(Auth::isAdmin()) { ?>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    <?php echo "Admin je prihlaseny"; }?>
+                        <button class="admin_show_button_delete right">Delete</button>
+                    <?php echo "Admin is logged in."; }?>
                 </div>
             <?php }?>
         </div>
+        <?php if(Auth::isAdmin()) { ?>
+        <a href="?c=Home&a=createshows" class="admin_show_button_create">Create</a>
+        <?php }?>
     </form>
 </div>

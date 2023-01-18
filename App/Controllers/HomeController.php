@@ -57,4 +57,9 @@ class HomeController extends AControllerBase
         $shows = Show::getAll();
         return $this->html($shows);
     }
+
+    public function createshows(): Response
+    {
+        return $this->html();
+    }
 }

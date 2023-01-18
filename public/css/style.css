@@ -358,3 +358,17 @@ footer {
     position: relative;
     margin-right: 10px;
 }
+
+.admin_show_button_create {
+    background-color: #FFFFFF;
+    border: 1px solid #00CC00;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 5px 5px 5px 5px;
+}
+.admin_show_button_create:hover {
+    background-color: #303030;
+    color: #00CC00;
+}
