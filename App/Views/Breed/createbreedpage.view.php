@@ -4,8 +4,8 @@
 
 <!-- CreateBreed Section -->
 <div class="w3-container section" id="createShow">
-    <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Create show</h1>
-    <p class="center-text">Please type exact information about show.</p>
+    <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Create new breed</h1>
+    <p class="center-text">Please type exact information new dog breed.</p>
 
 <!--    --><?php //if($data['error'] != "") { ?>
 <!--        <div class="errortext">-->
@@ -18,7 +18,15 @@
             <input class="w3-input w3-border login-line" type="text" placeholder="Name" required name="name">
         </label>
         <label>
-            <input class="w3-input w3-border login-line" type="text" placeholder="Section" required name="section">
+            <select id="section" name="section" class="w3-input w3-border login-line">
+                <option value="working group">Working group</option>
+                <option value="herding group">Herding group</option>
+                <option value="hound group">Hound group</option>
+                <option value="sporting group">Sporting group</option>
+                <option value="non-sporting group">Non-sporting group</option>
+                <option value="toy group">Toy group</option>
+                <option value="terrier group">Terrier group</option>
+            </select>
         </label>
         <label>
             <input class="w3-input w3-border login-line" type="text" placeholder="Country" required name="country">
