@@ -9,7 +9,8 @@ class Dog extends Model
     public $id;
     public $name;
     public $birth;
-    public $breed;
+    public $breed_id;
+    public $club_id;
 
     /**
      * @return mixed
@@ -62,16 +63,32 @@ class Dog extends Model
     /**
      * @return mixed
      */
-    public function getBreed()
+    public function getBreedId()
     {
-        return $this->breed;
+        return $this->breed_id;
     }
 
     /**
-     * @param mixed $breed
+     * @param mixed $breed_id
      */
-    public function setBreed($breed): void
+    public function setBreedId($breed_id): void
     {
-        $this->breed = $breed;
+        $this->breed_id = $breed_id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getClubId()
+    {
+        return $this->club_id;
+    }
+
+    /**
+     * @param mixed $club_id
+     */
+    public function setClubId($club_id): void
+    {
+        $this->club_id = $club_id;
     }
 }

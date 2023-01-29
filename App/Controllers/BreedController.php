@@ -51,4 +51,8 @@ class BreedController extends AControllerBase
 
         return $this->html(new Breed());
     }
+    public function createbreedpage(): Response
+    {
+        return $this->html();
+    }
 }
