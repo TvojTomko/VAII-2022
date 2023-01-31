@@ -40,7 +40,7 @@ $username = Auth::getName();
                     <div id="myDropdown" class="dropdown-content">
                         <a class="dropmenubtn center-text"><?php echo $username ?></a>
                         <?php if ($username == "admin") { ?>
-                            <a href="?c=Breed&a=createbreedpage" class="dropmenubtn"><i class="fa-solid fa-plus"></i> ADD BREED</a>
+                            <a href="?c=Breed&a=createbreed" class="dropmenubtn"><i class="fa-solid fa-plus"></i> ADD BREED</a>
                         <?php } ?>
                         <a href="?c=auth&a=changepasswordpage" class="dropmenubtn"><i class="fas fa-edit mvr"></i> CHANGE PASSWORD</a>
                         <a href="?c=auth&a=deleteuserpage" class="dropmenubtn"><i class="fas fa-user-minus mvr"></i> DELETE USER</a>

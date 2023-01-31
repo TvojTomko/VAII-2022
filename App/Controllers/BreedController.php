@@ -14,7 +14,7 @@ class BreedController extends AControllerBase
         $breeds = Breed::getAll();
         return $this->html($breeds);
     }
-    public function createbreed() : Response
+    public function createbreeds() : Response
     {
         $data = $this->request()->getPost();
 
@@ -51,7 +51,8 @@ class BreedController extends AControllerBase
 
         return $this->html(new Breed());
     }
-    public function createbreedpage(): Response
+
+    public function createbreed(): Response
     {
         return $this->html();
     }
