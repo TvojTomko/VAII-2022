@@ -59,9 +59,4 @@ class HomeController extends AControllerBase
         $clubs = Club::getAll();
         return $this->html($clubs);
     }
-
-    public function createshows(): Response
-    {
-        return $this->html();
-    }
 }

@@ -12,7 +12,7 @@ $username = Auth::getName()
         <div>
             <?php foreach ($data as $item) { ?>
                 <div class="shows">
-                    <img src="/checkpoint2/public/images/FCI_logo.png" class="logo">
+                    <img alt="fci" src="/checkpoint2/public/images/FCI_logo.png" class="logo">
                     <label class="shows_text">Title:</label> <?=$item->getTitle()?>
                     <br>
                     <label class="shows_text">Location:</label> <?=$item->getLocation()?>
