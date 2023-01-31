@@ -28,7 +28,7 @@ $username = Auth::getName()
             <?php }?>
         </div>
         <?php if(Auth::isAdmin()) { ?>
-            <a href="?c=Home&a=createshows" class="admin_show_button_create">Create</a>
+            <a href="?c=Club&a=createclubpage" class="admin_show_button_create">Create</a>
         <?php }?>
     </form>
 </div>

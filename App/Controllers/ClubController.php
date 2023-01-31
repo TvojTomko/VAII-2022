@@ -56,4 +56,14 @@ class ClubController extends AControllerBase
 
         return $this->html(new Club());
     }
+
+    public function deleteclub(): Response
+    {
+        return $this->redirect("?c=home");
+    }
+
+    public function createclubpage(): Response
+    {
+        return $this->html(null, "createclub");
+    }
 }
