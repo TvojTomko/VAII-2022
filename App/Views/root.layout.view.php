@@ -29,9 +29,9 @@ $username = Auth::getName();
         <!-- Right-sided navbar links -->
         <div class="right w3-hide-small">
             <a href="?c=Home&a=about" class="button-menu mygrey-text"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
-            <a href="?c=Home&a=clubs" class="button-menu mygrey-text"><i class="fa-solid fa-dog"></i> CLUBS</a>
+            <a href="?c=Club&a=index" class="button-menu mygrey-text"><i class="fa-solid fa-dog"></i> CLUBS</a>
             <a href="?c=Home&a=contact" class="button-menu mygrey-text"><i class="fa-solid fa-address-card"></i> CONTACT</a>
-            <a href="?c=Home&a=shows" class="button-menu mygrey-text"><i class="fas fa-star"></i> SHOWS</a>
+            <a href="?c=Show&a=index" class="button-menu mygrey-text"><i class="fas fa-star"></i> SHOWS</a>
             <?php if(!Auth::isLogged()) { ?>
                 <a href="?c=auth&a=loginpage" class="button-menu mygrey-text"><i class="fa fa-key mvr"></i> LOGIN</a>
             <?php } else { ?>

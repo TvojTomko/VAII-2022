@@ -5,6 +5,8 @@ use App\Controllers\Auth;
 
 $username = Auth::getName()
 ?>
+
+<!-- Shows section -->
 <div class="w3-container section">
     <form>
         <div>
@@ -23,7 +25,7 @@ $username = Auth::getName()
             <?php }?>
         </div>
         <?php if(Auth::isAdmin()) { ?>
-        <a href="?c=Home&a=createshows" class="admin_show_button_create">Create</a>
+        <a href="?c=Show&a=createshowspage" class="admin_show_button_create">Create</a>
         <?php }?>
     </form>
 </div>

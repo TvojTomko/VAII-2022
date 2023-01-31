@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\AControllerBase;
+use App\Core\Responses\RedirectResponse;
 use App\Core\Responses\Response;
 use App\Models\Show;
 
@@ -50,7 +51,8 @@ class ShowController extends AControllerBase
             }
         }
 
-        return $this->html(new Show());
+        $data = ['success' => 'Success.'];
+        return $this->html(new Show(), $data);
     }
 
     public function delete() : Response
@@ -62,5 +64,10 @@ class ShowController extends AControllerBase
         }
 
         return $this->redirect("?c=home");
+    }
+
+    public function createshowspage(): Response
+    {
+        return $this->html(null, "createshows");
     }
 }

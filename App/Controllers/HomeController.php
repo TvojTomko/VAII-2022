@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
+use App\Models\Club;
 use App\Models\Show;
 
 /**
@@ -42,11 +43,6 @@ class HomeController extends AControllerBase
         return $this->html();
     }
 
-    public function clubs(): Response
-    {
-        return $this->html();
-    }
-
     public function contact(): Response
     {
         return $this->html();
@@ -56,6 +52,12 @@ class HomeController extends AControllerBase
     {
         $shows = Show::getAll();
         return $this->html($shows);
+    }
+
+    public function clubs(): Response
+    {
+        $clubs = Club::getAll();
+        return $this->html($clubs);
     }
 
     public function createshows(): Response
