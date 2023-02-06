@@ -49,7 +49,7 @@ class BreedController extends AControllerBase
             }
         }
 
-        return $this->html(new Breed());
+        return $this->html(new Breed(), "createbreed");
     }
 
     public function createbreed(): Response

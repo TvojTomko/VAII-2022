@@ -55,7 +55,7 @@ class ShowController extends AControllerBase
         return $this->html(new Show(), $data);
     }
 
-    public function delete() : Response
+    public function deleteshow() : Response
     {
         $id = $this->request()->getValue("id");
         $post = Show::getOne($id);

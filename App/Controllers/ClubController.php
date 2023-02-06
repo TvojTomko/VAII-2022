@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
+use App\Models\Breed;
 use App\Models\Club;
 
 class ClubController extends AControllerBase
@@ -59,11 +60,18 @@ class ClubController extends AControllerBase
 
     public function deleteclub(): Response
     {
+        $id = $this->request()->getValue("id");
+        $post = Club::getOne($id);
+        if($post != null){
+            $post->delete();
+        }
+
         return $this->redirect("?c=home");
     }
 
     public function createclubpage(): Response
     {
-        return $this->html(null, "createclub");
+        $breeds = Breed::getAll();
+        return $this->html($breeds, "createclub");
     }
 }

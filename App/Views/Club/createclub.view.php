@@ -1,5 +1,5 @@
 <?php
-/** @var Array $data */
+/** @var \App\Models\Breed[] $data */
 ?>
 
 <!-- CreateShows Section -->
@@ -27,7 +27,14 @@
             <input class="w3-input w3-border login-line" type="number" placeholder="Number of dogs" required name="number_of_dogs">
         </label>
         <label>
+            <!--
             <input class="w3-input w3-border login-line" type="number" placeholder="Breed_id" required name="breed">
+            -->
+            <select id="section" name="section" class="w3-input w3-border login-line">
+                <?php foreach ($data as $item) { ?>
+                        <option value="<?php echo $item->getId()?>"><?php echo $item->getName()?></option>
+                <?php } ?>
+            </select>
         </label>
         <button class="button-menu mygrey-text login-button" type="submit">
             <i class="fa fa-paper-plane"></i> CREATE
