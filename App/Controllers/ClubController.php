@@ -13,7 +13,7 @@ class ClubController extends AControllerBase
     public function index(): Response
     {
         $clubs = Club::getAll();
-        return $this->html($clubs, "club");
+        return $this->html($clubs, "clubs");
     }
 
     public function createclub() : Response

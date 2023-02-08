@@ -67,8 +67,44 @@ class ShowController extends AControllerBase
         return $this->redirect("?c=show");
     }
 
+    public function editshow() : Response
+    {
+        $id = $this->request()->getValue("id");
+        $post = Show::getOne($id);
+        $data = $this->request()->getPost();
+        if(isset($data["title"]))
+        {
+            $title = $_POST['title'];
+            $location = $_POST['location'];
+            $date = $_POST['date'];
+
+            if(!(strlen($title) > 0) || !(strlen($title) < 100))
+            {
+                echo "<div class='text-danger'>Title must not be empty</div><br>";
+
+            }
+            elseif(!(strlen($location) > 0))
+            {
+                echo "<div class='text-danger'>Location must not be empty</div><br>";
+
+            }
+            elseif(!$date == null)
+            {
+                echo "<div class='text-danger'>Date must not be empty</div><br>";
+
+            } else {
+                $post->setTitle($data["title"]);
+                $post->setLocation($data["location"]);
+                $post->setDate($data["date"]);
+                $post->save();
+            }
+        }
+
+        return $this->html($post,"show");
+    }
+
     public function createshowspage(): Response
     {
-        return $this->html(null, "createshows");
+        return $this->html(null, "createshow");
     }
 }
