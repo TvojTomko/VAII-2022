@@ -13,10 +13,10 @@ class ShowController extends AControllerBase
     public function index(): Response
     {
         $shows = Show::getAll();
-        return $this->html($shows, "show");
+        return $this->html($shows, "shows");
     }
 
-    public function createshows() : Response
+    public function createshow() : Response
     {
         $data = $this->request()->getPost();
 

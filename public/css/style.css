@@ -475,3 +475,8 @@ img {
 .lastline {
     margin-left: 110px;
 }
+
+.admin_text {
+    margin-top: 5px;
+    margin-right: 5px;
+}

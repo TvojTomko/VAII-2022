@@ -23,13 +23,15 @@ $username = Auth::getName()
                     <br>
                     <label class="shows_text">Date:</label> <?=$item->getDate()?>
                     <?php if(Auth::isAdmin()) { ?>
+                        <a href="#" class="admin_show_button_edit right" onclick="">Edit</a>
                         <a href="#" class="admin_show_button_delete right" onclick="return confirmDeleteShow(<?=$item->getId()?>)">Delete</a>
-                    <?php echo "Admin is logged in."; }?>
+                    <?php }?>
                 </div>
             <?php }?>
         </div>
         <?php if(Auth::isAdmin()) { ?>
-        <a href="?c=Show&a=createshowspage" class="admin_show_button_create">Create</a>
+            <a href="?c=Show&a=createshowspage" class="admin_show_button_create">Create</a>
+            <label class="right admin_text">Admin is logged in</label>
         <?php }?>
     </form>
 </div>

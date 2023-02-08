@@ -28,12 +28,14 @@ $username = Auth::getName()
                         <br>
                         <a href="#" class="admin_show_button_edit right" onclick="">Edit</a>
                         <a href="#" class="admin_show_button_delete right" onclick="return confirmDeleteClub(<?=$item->getId()?>)">Delete</a>
-                        <label class="lastline"><?php echo "Admin is logged in."; }?></label>
+                        <br>
+                    <?php } ?>
                 </div>
             <?php }?>
         </div>
         <?php if(Auth::isAdmin()) { ?>
             <a href="?c=Club&a=createclubpage" class="admin_show_button_create">Create club</a>
+            <label class="right admin_text">Admin is logged in</label>
         <?php }?>
     </form>
 </div>
