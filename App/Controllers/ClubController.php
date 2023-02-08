@@ -13,7 +13,7 @@ class ClubController extends AControllerBase
     public function index(): Response
     {
         $clubs = Club::getAll();
-        return $this->html($clubs);
+        return $this->html($clubs, "club");
     }
 
     public function createclub() : Response
@@ -44,6 +44,16 @@ class ClubController extends AControllerBase
                 $data = ['error' => 'Since must not be empty.'];
                 return $this->html($data);
             }
+            else if (!($number_of_dogs >= 0))
+            {
+                $data = ['error' => 'Enter a valid number of dogs.'];
+                return $this->html($data);
+            }
+            else if (!($breed >= 0))
+            {
+                $data = ['error' => 'Enter a valid breed_id.'];
+                return $this->html($data);
+            }
             else {
                 $post = new Club();
                 $post->setTitle($data["title"]);
@@ -62,11 +72,12 @@ class ClubController extends AControllerBase
     {
         $id = $this->request()->getValue("id");
         $post = Club::getOne($id);
-        if($post != null){
+        if ($post != null)
+        {
             $post->delete();
         }
 
-        return $this->redirect("?c=home");
+        return $this->redirect("?c=club");
     }
 
     public function createclubpage(): Response

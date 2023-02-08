@@ -13,7 +13,7 @@ class ShowController extends AControllerBase
     public function index(): Response
     {
         $shows = Show::getAll();
-        return $this->html($shows);
+        return $this->html($shows, "show");
     }
 
     public function createshows() : Response
@@ -59,11 +59,12 @@ class ShowController extends AControllerBase
     {
         $id = $this->request()->getValue("id");
         $post = Show::getOne($id);
-        if($post != null){
+        if ($post != null)
+        {
             $post->delete();
         }
 
-        return $this->redirect("?c=home");
+        return $this->redirect("?c=show");
     }
 
     public function createshowspage(): Response

@@ -12,7 +12,7 @@ class BreedController extends AControllerBase
     public function index(): Response
     {
         $breeds = Breed::getAll();
-        return $this->html($breeds);
+        return $this->html($breeds, "breed");
     }
     public function createbreeds() : Response
     {

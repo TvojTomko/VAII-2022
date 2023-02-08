@@ -8,6 +8,10 @@ $username = Auth::getName()
 
 <!-- Shows section -->
 <div class="w3-container section">
+    <div class="w3-container" id="show">
+        <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Shows</h1>
+        <p class="w3-center w3-large">List of upcoming shows</p>
+    </div>
     <form>
         <div>
             <?php foreach ($data as $item) { ?>
@@ -19,7 +23,7 @@ $username = Auth::getName()
                     <br>
                     <label class="shows_text">Date:</label> <?=$item->getDate()?>
                     <?php if(Auth::isAdmin()) { ?>
-                        <button class="admin_show_button_delete right">Delete</button>
+                        <a href="#" class="admin_show_button_delete right" onclick="return confirmdelete(<?=$item->getId()?>)">Delete</a>
                     <?php echo "Admin is logged in."; }?>
                 </div>
             <?php }?>

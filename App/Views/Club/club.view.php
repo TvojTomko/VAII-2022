@@ -6,6 +6,10 @@ use App\Controllers\Auth;
 $username = Auth::getName()
 ?>
 <div class="w3-container section">
+    <div class="w3-container" id="clubs">
+        <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Clubs</h1>
+        <p class="w3-center w3-large">List of our official registered clubs</p>
+    </div>
     <form>
         <div>
             <?php foreach ($data as $item) { ?>
