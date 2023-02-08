@@ -52,7 +52,11 @@ class ShowController extends AControllerBase
         }
 
         $data = ['success' => 'Success.'];
-        return $this->html(new Show(), $data);
+        return $this->html(
+            [
+                new Show()
+            ]
+        );
     }
 
     public function deleteshow() : Response
@@ -72,6 +76,7 @@ class ShowController extends AControllerBase
         $id = $this->request()->getValue("id");
         $post = Show::getOne($id);
         $data = $this->request()->getPost();
+
         if(isset($data["title"]))
         {
             $title = $_POST['title'];
@@ -88,7 +93,7 @@ class ShowController extends AControllerBase
                 echo "<div class='text-danger'>Location must not be empty</div><br>";
 
             }
-            elseif(!$date == null)
+            elseif(!(strlen($date) > 0))
             {
                 echo "<div class='text-danger'>Date must not be empty</div><br>";
 
@@ -97,14 +102,19 @@ class ShowController extends AControllerBase
                 $post->setLocation($data["location"]);
                 $post->setDate($data["date"]);
                 $post->save();
+                }
             }
-        }
 
-        return $this->html($post,"show");
+        return $this->html($post,"editshow");
     }
 
-    public function createshowspage(): Response
+    public function createshowspage() : Response
     {
         return $this->html(null, "createshow");
+    }
+
+    public function editshowpage() : Response
+    {
+        return $this->html(null, "editshow");
     }
 }
