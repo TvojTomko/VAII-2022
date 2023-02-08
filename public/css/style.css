@@ -359,15 +359,50 @@ footer {
     margin-right: 10px;
 }
 
+.admin_show_button_delete {
+    background-color: red;
+    border: 1px solid darkred;
+    padding: 3px 5px 3px 5px;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 5px 5px 5px 5px;
+    color: #FFFFFF;
+}
+
+.admin_show_button_delete:hover {
+    background-color: #C10000;
+    transition: 0.4s;
+    display: inline-block;
+}
+
+.admin_show_button_edit {
+    background-color: #00CC00;
+    border: 1px solid darkgreen;
+    padding: 3px 10px 3px 10px;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 5px 5px 5px 5px;
+    color: #FFFFFF;
+}
+
+.admin_show_button_edit:hover {
+    background-color: #009405;
+    transition: 0.4s;
+    display: inline-block;
+}
+
 .admin_show_button_create {
     background-color: #FFFFFF;
     border: 1px solid #00CC00;
-    padding: 10px 10px;
+    padding: 3px 10px 3px 10px;
     text-align: center;
     font-size: 18px;
     text-decoration: none;
     margin: 5px 5px 5px 5px;
 }
+
 .admin_show_button_create:hover {
     background-color: #303030;
     color: #00CC00;

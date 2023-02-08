@@ -21,18 +21,19 @@ $username = Auth::getName()
                     <br>
                     <label class="shows_text">Since:</label> <?=$item->getSince()?>
                     <br>
-                    <label class="shows_text">Number of dogs</label> <?=$item->getNumberOfDogs()?>
+                    <label class="shows_text">Number of dogs:</label> <?=$item->getNumberOfDogs()?>
                     <br>
                     <label class="shows_text lastline">Breed:</label> <?=$item->getBreed()?>
                     <?php if(Auth::isAdmin()) { ?>
                         <br>
-                        <a class="admin_show_button_delete right" onclick="return confirmDeleteClub(<?=$item->getId()?>)">Delete</a>
-                        <a class="lastline"><?php echo "Admin is logged in."; }?></a>
+                        <a href="#" class="admin_show_button_edit right" onclick="">Edit</a>
+                        <a href="#" class="admin_show_button_delete right" onclick="return confirmDeleteClub(<?=$item->getId()?>)">Delete</a>
+                        <label class="lastline"><?php echo "Admin is logged in."; }?></label>
                 </div>
             <?php }?>
         </div>
         <?php if(Auth::isAdmin()) { ?>
-            <a href="?c=Club&a=createclubpage" class="admin_show_button_create">Create</a>
+            <a href="?c=Club&a=createclubpage" class="admin_show_button_create">Create club</a>
         <?php }?>
     </form>
 </div>
