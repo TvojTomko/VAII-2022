@@ -23,7 +23,7 @@ $username = Auth::getName()
                     <br>
                     <label class="shows_text">Date:</label> <?=$item->getDate()?>
                     <?php if(Auth::isAdmin()) { ?>
-                        <a href="#" class="admin_show_button_delete right" onclick="return confirmdelete(<?=$item->getId()?>)">Delete</a>
+                        <a href="#" class="admin_show_button_delete right" onclick="return confirmDeleteShow(<?=$item->getId()?>)">Delete</a>
                     <?php echo "Admin is logged in."; }?>
                 </div>
             <?php }?>

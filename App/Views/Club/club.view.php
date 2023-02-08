@@ -26,7 +26,7 @@ $username = Auth::getName()
                     <label class="shows_text lastline">Breed:</label> <?=$item->getBreed()?>
                     <?php if(Auth::isAdmin()) { ?>
                         <br>
-                        <button class="admin_show_button_delete right">Delete</button>
+                        <a class="admin_show_button_delete right" onclick="return confirmDeleteClub(<?=$item->getId()?>)">Delete</a>
                         <a class="lastline"><?php echo "Admin is logged in."; }?></a>
                 </div>
             <?php }?>
