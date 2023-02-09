@@ -1,7 +1,9 @@
 <?php
-/** @var \App\Models\Club[] $data */
+/** @var Club[] $data */
 /** @var string $username  */
+
 use App\Controllers\Auth;
+use App\Models\Club;
 
 $username = Auth::getName()
 ?>

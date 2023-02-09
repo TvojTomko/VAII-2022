@@ -10,7 +10,7 @@
     <div class="w3-col m6 index-text index-center smallscreen-index">
       <h3 class="index-title">We know design.</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
-      <p><a href="?c=Home&a=clubs" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
+      <p><a href="?c=Home&a=clubs" class="w3-button w3-black"><i class="fa fa-th"></i> View Our Works</a></p>
     </div>
     <div class="w3-col m6">
       <img class="w3-image w3-round-large doggyimg responsive" src="/checkpoint2/public/images/dogs-family.jpg" alt="dogs-family">

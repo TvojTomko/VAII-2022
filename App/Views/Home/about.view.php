@@ -30,7 +30,7 @@
 <!-- Button for showing all breeds -->
 <div class="container section about-breed-bg">
     <div class="center-button center-text about-breed-text">
-        <a href="?c=Breed&a=allbreedspage" class="allbreed-button">List of registered breeds</a><br>
+        <a href="?c=Breed" class="allbreed-button">List of registered breeds</a><br>
         <label class="center">Browse all of our official registered breeds!</label>
     </div>
 </div>
