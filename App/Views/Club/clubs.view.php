@@ -26,7 +26,7 @@ $username = Auth::getName()
                     <label class="shows_text lastline">Breed:</label> <?=$item->getBreed()?>
                     <?php if(Auth::isAdmin()) { ?>
                         <br>
-                        <a href="#" class="admin_show_button_edit right" onclick="">Edit</a>
+                        <a href="?c=Club&a=editclub&id=<?= $item->getId() ?>" class="admin_show_button_edit right">Edit</a>
                         <a href="#" class="admin_show_button_delete right" onclick="return confirmDeleteClub(<?=$item->getId()?>)">Delete</a>
                         <br>
                     <?php } ?>

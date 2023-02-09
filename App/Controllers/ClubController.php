@@ -68,7 +68,7 @@ class ClubController extends AControllerBase
         return $this->html(new Club());
     }
 
-    public function deleteclub(): Response
+    public function deleteclub() : Response
     {
         $id = $this->request()->getValue("id");
         $post = Club::getOne($id);
@@ -80,7 +80,57 @@ class ClubController extends AControllerBase
         return $this->redirect("?c=club");
     }
 
-    public function createclubpage(): Response
+    public function editclub() : Response
+    {
+        $id = $this->request()->getValue("id");
+        $post = Club::getOne($id);
+        $data = $this->request()->getPost();
+
+        if(isset($data["title"]))
+        {
+            $title = $_POST['title'];
+            $owner = $_POST['owner'];
+            $since = $_POST['since'];
+            $number_of_dogs = $_POST['number_of_dogs'];
+            $breed = $_POST['breed'];
+
+            if(!(strlen($title) > 0) || !(strlen($title) < 100))
+            {
+                echo "<div class='text-danger'>Title must not be empty</div><br>";
+
+            }
+            elseif(!(strlen($owner) > 0))
+            {
+                echo "<div class='text-danger'>Location must not be empty</div><br>";
+
+            }
+            elseif(!(strlen($since) > 0))
+            {
+                echo "<div class='text-danger'>Date must not be empty</div><br>";
+
+            }
+            elseif(!(strlen($number_of_dogs) > 0))
+            {
+                echo "<div class='text-danger'>Number of dogs must not be empty</div><br>";
+            }
+            elseif(!(strlen($breed) > 0))
+            {
+                echo "<div class='text-danger'>Breed must not be empty</div><br>";
+            }
+            else {
+                $post->setTitle($data["title"]);
+                $post->setOwner($data["owner"]);
+                $post->setSince($data["since"]);
+                $post->setNumberOfDogs($data["number_of_dogs"]);
+                $post->setBreed($data["breed"]);
+                $post->save();
+            }
+        }
+
+        return $this->html($post,"editclub");
+    }
+
+    public function createclubpage() : Response
     {
         $breeds = Breed::getAll();
         return $this->html($breeds, "createclub");
