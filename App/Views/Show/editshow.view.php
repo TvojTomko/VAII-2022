@@ -1,5 +1,7 @@
 <?php
-/* @var \App\Models\Show $data */
+/* @var Show $data */
+
+use App\Models\Show;
 ?>
 
 <!-- EditShows Section -->
@@ -7,7 +9,7 @@
     <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Edit show</h1>
     <p class="center-text">Edit information about show.</p>
 
-    <form name="createform" class="contactform" method="post" action="?c=Show&a=editshow">
+    <form name="editform" class="contactform" method="post" action="?c=Show&a=editshow">
         <label class="login-label">
             <input class="w3-input w3-border login-line" type="text" placeholder="Title" required name="title" value="<?= $data->getTitle() ?>">
         </label>
