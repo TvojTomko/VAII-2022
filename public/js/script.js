@@ -10,3 +10,10 @@ function confirmDeleteClub(id) {
     }
     return false;
 }
+function confirmDeleteBreed(id) {
+    if (confirm("Are you sure you want to delete this item?")) {
+        window.location.href = "?c=breed&a=deletebreed&id=" + id;
+    }
+    return false;
+}
+// AJAX

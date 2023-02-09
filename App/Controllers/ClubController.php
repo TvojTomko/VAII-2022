@@ -135,4 +135,10 @@ class ClubController extends AControllerBase
         $breeds = Breed::getAll();
         return $this->html($breeds, "createclub");
     }
+
+    public function refreshclubpage() : Response
+    {
+        $clubs = Club::getAll();
+        return $this->html($clubs, "clubs");
+    }
 }

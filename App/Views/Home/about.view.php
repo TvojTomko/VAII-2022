@@ -1,6 +1,6 @@
 <?php ?>
 <!-- About Section -->
-<div class="w3-container section" id="about">
+<div class="section" id="about">
     <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>About our project</h1>
     <p class="w3-center w3-large">Key features of our project</p>
     <div class="w3-row-padding w3-center section">
@@ -27,31 +27,38 @@
     </div>
 </div>
 
+<!-- Button for showing all breeds -->
+<div class="container section about-breed-bg">
+    <div class="center-button center-text about-breed-text">
+        <a href="?c=Breed&a=allbreedspage" class="allbreed-button">List of registered breeds</a><br>
+        <label class="center">Browse all of our official registered breeds!</label>
+    </div>
+</div>
+
 <!-- Gallery Section -->
-<div class="slideshow-container">
-    <h3 class="w3-center">Gallery</h3>
-    <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="/checkpoint2/public/images/roy2.png" style="width:100%">
-    </div>
+<div class="section about-gallery" id="gallery">
+    <h3 class="w3-center title">Gallery</h3>
+    <p></p>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="/checkpoint2/public/images/roy2.png" class="about-gallery-pic">
+        </div>
 
-    <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="/checkpoint2/public/images/breedclubs/chowchow-family.jpg" style="width:100%">
-    </div>
+        <div class="mySlides fade">
+            <img src="/checkpoint2/public/images/breedclubs/chowchow-family.jpg" class="about-gallery-pic">
+        </div>
 
-    <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="/checkpoint2/public/images/breedclubs/newfoundland-family.jpg" style="width:100%">
+        <div class="mySlides fade">
+            <img src="/checkpoint2/public/images/breedclubs/newfoundland-family.jpg" class="about-gallery-pic">
+        </div>
+    </div>
+    <br>
+    <div class="center-text">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
     </div>
 </div>
-<br>
-<div style="text-align:center">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-</div>
-
 <!-- Team Section -->
 <div class="w3-container section" id="team">
     <h3 class="w3-center">OUR TEAM</h3>
