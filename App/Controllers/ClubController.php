@@ -32,7 +32,8 @@ class ClubController extends AControllerBase
 
             if (!(strlen($title) > 0))
             {
-                $data = ['error' => 'Title must not be empty.'];
+                $data = ['error' => 'Owner must not be empty.'];
+                //echo "<div class='text-danger'>Title must not be empty</div><br>";
                 return $this->html($data);
             }
             else if (!(strlen($owner) > 0))
@@ -63,10 +64,11 @@ class ClubController extends AControllerBase
                 $post->setNumberOfDogs($data["number_of_dogs"]);
                 $post->setBreed($data["breed"]);
                 $post->save();
+                return $this->redirect("?c=club");
             }
         }
 
-        return $this->redirect("?c=club");
+        return $this->html($data, "createclub");
     }
 
     public function deleteclub() : Response
@@ -95,7 +97,7 @@ class ClubController extends AControllerBase
             $number_of_dogs = $_POST['number_of_dogs'];
             $breed = $_POST['breed'];
 
-            if(!(strlen($title) > 0) || !(strlen($title) < 100))
+            if(!(strlen($title) > 0))
             {
                 echo "<div class='text-danger'>Title must not be empty</div><br>";
 

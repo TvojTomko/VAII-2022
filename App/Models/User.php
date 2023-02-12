@@ -6,10 +6,10 @@ use App\Core\Model;
 
 class User extends Model
 {
-    public $id;
-    public $email;
-    public $username;
-    public $password;
+    protected $id;
+    protected $email;
+    protected $username;
+    protected $password;
 
     /**
      * @return mixed

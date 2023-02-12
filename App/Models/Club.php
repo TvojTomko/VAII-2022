@@ -6,12 +6,12 @@ use App\Core\Model;
 
 class Club extends Model
 {
-    public $id;
-    public $title;
-    public $owner;
-    public $since;
-    public $number_of_dogs;
-    public $breed;
+    protected $id;
+    protected $title;
+    protected $owner;
+    protected $since;
+    protected $number_of_dogs;
+    protected $breed;
 
     /**
      * @return mixed

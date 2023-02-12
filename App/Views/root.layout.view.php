@@ -20,7 +20,6 @@ $username = Auth::getName();
     <script src="https://kit.fontawesome.com/a3762f05b2.js" crossorigin="anonymous"></script>
     <script src="/checkpoint2/public/js/script.js"></script>
     <script src="/checkpoint2/public/js/validation.js"></script>
-    <script src="/checkpoint2/public/js/root.js"></script>
 </head>
 <body>
 <!-- Navbar -->
@@ -59,7 +58,7 @@ $username = Auth::getName();
 </div>
 
 <!-- Mobile menu -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar" onclick="w3_open()">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
     <a href="?c=Home&a=about" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
     <a href="?c=Home&a=clubs" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-paw"></i> CLUBS</a>
@@ -93,39 +92,8 @@ $username = Auth::getName();
         <i class="fa-brands fa-tiktok sm-opacity"></i>
     </div>
 </footer>
-<!--
-<script>
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
 
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
-    }
-</script>
-<script>
-    var mySidebar = document.getElementById("mySidebar");
-    function w3_open() {
-        if (mySidebar.style.display === 'block') {
-            mySidebar.style.display = 'none';
-        } else {
-            mySidebar.style.display = 'block';
-        }
-    }
-    // Close the sidebar with the close button
-    function w3_close() {
-        mySidebar.style.display = "none";
-    }
-</script>
--->
+<script src="/checkpoint2/public/js/root.js"></script>
+
 </body>
 </html>

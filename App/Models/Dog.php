@@ -6,12 +6,12 @@ use App\Core\Model;
 
 class Dog extends Model
 {
-    public $id;
-    public $name;
-    public $birth;
-    public $height;
-    public $weight;
-    public $club;
+    protected $id;
+    protected $name;
+    protected $birth;
+    protected $height;
+    protected $weight;
+    protected $club;
 
     /**
      * @return mixed

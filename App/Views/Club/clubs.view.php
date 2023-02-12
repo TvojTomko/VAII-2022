@@ -20,7 +20,7 @@ $username = Auth::getName()
         <div>
             <?php foreach ($data as $item) { ?>
                 <div class="shows">
-                    <img src="/checkpoint2/public/images/dog-paw_silhouette.jpg" class="logo">
+                    <img src="/checkpoint2/public/images/dog-paw_silhouette.jpg" class="logo" alt="logo">
                     <label class="shows_text">Title:</label> <?=$item->getTitle()?>
                     <br>
                     <label class="shows_text">Owner:</label> <?=$item->getOwner()?>
