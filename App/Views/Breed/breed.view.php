@@ -10,8 +10,8 @@ $username = Auth::getName()
 
 <div class="w3-container section">
     <div class="w3-container" id="clubs">
-        <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Clubs</h1>
-        <p class="w3-center w3-large">List of our official registered clubs</p>
+        <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Breeds</h1>
+        <p class="w3-center w3-large">List of our official registered breeds</p>
     </div>
         <div>
             <?php foreach ($data as $item) { ?>
