@@ -31,7 +31,7 @@ use App\Models\Club;
             </button>
 
             <?php if ($data->getId()) { ?>
-                <input type="hidden" name="id" value="<?=$data->getId() ?>">
+                <input type="hidden" name="id" value="<?= $data->getId() ?>">
                 <input type="hidden" name="breed" value="<?= $data->getBreed() ?>">
             <?php } ?>
         </form>
