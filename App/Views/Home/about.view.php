@@ -41,15 +41,15 @@
     <p></p>
     <div class="slideshow-container">
         <div class="mySlides fade">
-            <img src="/checkpoint2/public/images/roy2.png" class="about-gallery-pic">
+            <img src="/checkpoint2/public/images/roy2.png" alt="roy" class="about-gallery-pic">
         </div>
 
         <div class="mySlides fade">
-            <img src="/checkpoint2/public/images/breedclubs/chowchow-family.jpg" class="about-gallery-pic">
+            <img src="/checkpoint2/public/images/breedclubs/chowchow-family.jpg" alt="chow-chow" class="about-gallery-pic">
         </div>
 
         <div class="mySlides fade">
-            <img src="/checkpoint2/public/images/breedclubs/newfoundland-family.jpg" class="about-gallery-pic">
+            <img src="/checkpoint2/public/images/breedclubs/newfoundland-family.jpg" alt="newfoundland" class="about-gallery-pic">
         </div>
     </div>
     <br>
