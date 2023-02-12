@@ -1,8 +1,6 @@
 <?php
 /* @var Club $data */
-/** @var Breed[] $breeds */
 
-use App\Models\Breed;
 use App\Models\Club;
 ?>
 
@@ -11,7 +9,7 @@ use App\Models\Club;
     <h3 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Edit club</h3>
     <div>
         <form name="editform" class="contactform" method="post" action="?c=Club&a=editclub">
-            <label class="login-label">
+            <label>
                 <input class="w3-input w3-border login-line" type="text" placeholder="Title" required name="title" value="<?= $data->getTitle() ?>">
             </label>
             <label>
@@ -20,7 +18,7 @@ use App\Models\Club;
             <label>
                 <input class="w3-input w3-border login-line" type="date" placeholder="Since" required name="since" value="<?= $data->getSince() ?>">
             </label>
-            <label class="login-label">
+            <label>
                 <input class="w3-input w3-border login-line" type="number" placeholder="Number of dogs" required name="number_of_dogs" value="<?= $data->getNumberOfDogs() ?>">
             </label>
             <!--
