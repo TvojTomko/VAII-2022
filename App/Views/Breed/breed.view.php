@@ -29,4 +29,3 @@ $username = Auth::getName()
 
         <?php }?>
 </div>
-

@@ -1,6 +1,8 @@
 <?php
 /* @var Club $data */
+/** @var Breed[] $breeds */
 
+use App\Models\Breed;
 use App\Models\Club;
 ?>
 
@@ -22,7 +24,16 @@ use App\Models\Club;
                 <input class="w3-input w3-border login-line" type="text" placeholder="Number of dogs" required name="number_of_dogs" value="<?= $data->getNumberOfDogs() ?>">
             </label>
             <label class="login-label">
+
                 <input class="w3-input w3-border login-line" type="text" placeholder="Breed" required name="breed" value="<?= $data->getBreed() ?>">
+
+                <!--
+                <select id="breed" name="breed" class="w3-input w3-border login-line">
+                    <?php foreach ($breeds as $item) { ?>
+                        <option value="<?= $item->getId() ?>"><?php echo $item->getName()?></option>
+                    <?php } ?>
+                </select>
+                -->
             </label>
             <button class="button-menu mygrey-text login-button" type="submit">
                 <i class="fa fa-paper-plane"></i> EDIT

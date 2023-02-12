@@ -20,6 +20,7 @@ $username = Auth::getName();
     <script src="https://kit.fontawesome.com/a3762f05b2.js" crossorigin="anonymous"></script>
     <script src="/checkpoint2/public/js/script.js"></script>
     <script src="/checkpoint2/public/js/validation.js"></script>
+    <script src="/checkpoint2/public/js/root.js"></script>
 </head>
 <body>
 <!-- Navbar -->
@@ -65,9 +66,9 @@ $username = Auth::getName();
     <a href="?c=Home&a=contact" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-address-card"></i> CONTACT</a>
     <a href="?c=Home&a=shows" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-star"></i> SHOWS</a>
     <?php if(!Auth::isLogged()) { ?>
-    <a href="?c=auth&a=loginpage" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-sharp fa-solid fa-key"></i> LOGIN</a>
+        <a href="?c=auth&a=loginpage" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-sharp fa-solid fa-key"></i> LOGIN</a>
     <?php } else { ?>
-    <br>
+        <br>
         <a onclick="w3_close()" class="w3-bar-item w3-button"><?php echo $username ?></a>
         <a href="?c=auth&a=changepasswordpage" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-edit mvr"></i> CHANGE PASSWORD</a>
         <a href="?c=auth&a=deleteuserpage" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-user-minus mvr"></i> DELETE USER</a>
@@ -92,6 +93,7 @@ $username = Auth::getName();
         <i class="fa-brands fa-tiktok sm-opacity"></i>
     </div>
 </footer>
+<!--
 <script>
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
@@ -124,5 +126,6 @@ $username = Auth::getName();
         mySidebar.style.display = "none";
     }
 </script>
+-->
 </body>
 </html>

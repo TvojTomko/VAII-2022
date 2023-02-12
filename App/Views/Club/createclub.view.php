@@ -1,5 +1,8 @@
 <?php
-/** @var \App\Models\Breed[] $data */
+/** @var Breed[] $data */
+
+use App\Models\Breed;
+
 ?>
 
 <!-- CreateShows Section -->
@@ -26,13 +29,13 @@
         <label>
             <input class="w3-input w3-border login-line" type="number" placeholder="Number of dogs" required name="number_of_dogs">
         </label>
-        <label>
+        <label for="breed">
             <!--
             <input class="w3-input w3-border login-line" type="number" placeholder="Breed_id" required name="breed">
             -->
-            <select id="section" name="section" class="w3-input w3-border login-line">
+            <select id="breed" name="breed" class="w3-input w3-border login-line">
                 <?php foreach ($data as $item) { ?>
-                        <option value="<?php echo $item->getId()?>"><?php echo $item->getName()?></option>
+                        <option value="<?= $item->getId() ?>"><?php echo $item->getName()?></option>
                 <?php } ?>
             </select>
         </label>

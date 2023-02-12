@@ -65,7 +65,7 @@ class ClubController extends AControllerBase
             }
         }
 
-        return $this->html(new Club());
+        return $this->redirect("?c=club");
     }
 
     public function deleteclub() : Response
@@ -126,8 +126,7 @@ class ClubController extends AControllerBase
                 $post->save();
             }
         }
-
-        return $this->html($post,"editclub");
+        return $this->html($post, "editclub");
     }
 
     public function createclubpage() : Response
