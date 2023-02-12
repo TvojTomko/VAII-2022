@@ -12,8 +12,7 @@ class ShowController extends AControllerBase
 
     public function index(): Response
     {
-        $shows = Show::getAll();
-        return $this->html($shows, "shows");
+        return $this->html(null, "shows");
     }
 
     public function createshow() : Response
@@ -49,11 +48,12 @@ class ShowController extends AControllerBase
                 $post->setDate($data["date"]);
                 $post->save();
 
-                return $this->redirect("?c=Show");
+                $data = ['success' => 'Show was added.', 'delete' => ''];
+                return $this->html($data, "shows");
             }
         }
 
-        $data = ['success' => 'Success.'];
+        $data = ['success' => '', 'delete' => ''];
         return $this->html($data, "createshow");
     }
 
@@ -66,7 +66,8 @@ class ShowController extends AControllerBase
             $post->delete();
         }
 
-        return $this->redirect("?c=show");
+        $data = ['delete' => 'Item was deleted.', 'success' => ''];
+        return $this->html($data, "shows");
     }
 
     public function editshow() : Response

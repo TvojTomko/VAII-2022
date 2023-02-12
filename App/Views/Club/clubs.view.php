@@ -1,5 +1,6 @@
 <?php
-/** @var Club[] $data */
+/** @var Array $data */
+/** @var Club[] $clubs */
 /** @var Dog[] $dogs */
 /** @var string $username  */
 
@@ -8,6 +9,7 @@ use App\Models\Breed;
 use App\Models\Club;
 use App\Models\Dog;
 
+$clubs = Club::getAll();
 $dogs = Dog::getAll();
 $username = Auth::getName()
 ?>
@@ -18,7 +20,7 @@ $username = Auth::getName()
     </div>
     <form>
         <div>
-            <?php foreach ($data as $item) { ?>
+            <?php foreach ($clubs as $item) { ?>
                 <div class="shows">
                     <img src="/checkpoint2/public/images/dog-paw_silhouette.jpg" class="logo" alt="logo">
                     <label class="shows_text">Title:</label> <?=$item->getTitle()?>

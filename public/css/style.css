@@ -316,6 +316,13 @@ footer {
     text-align: center;
 }
 
+.successtext {
+    font-size: 17px;
+    color: #00CC00;
+    font-weight: bold;
+    text-align: center;
+}
+
 @media screen and (max-width: 1200px) {
     .club-text-section {
         padding-top: 10px;

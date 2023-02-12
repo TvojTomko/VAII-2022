@@ -1,8 +1,10 @@
 <?php
-/** @var Breed[] $data */
+/** @var Breed[] $breeds */
+/** @var Array $data */
 
 use App\Models\Breed;
 
+$breeds = Breed::getAll();
 ?>
 
 <!-- CreateShows Section -->
@@ -34,7 +36,7 @@ use App\Models\Breed;
             <input class="w3-input w3-border login-line" type="number" placeholder="Breed_id" required name="breed">
             -->
             <select id="breed" name="breed" class="w3-input w3-border login-line">
-                <?php foreach ($data as $item) { ?>
+                <?php foreach ($breeds as $item) { ?>
                         <option value="<?= $item->getId() ?>"><?php echo $item->getName()?></option>
                 <?php } ?>
             </select>

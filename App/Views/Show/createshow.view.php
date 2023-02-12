@@ -7,7 +7,7 @@
     <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Create show</h1>
     <p class="center-text">Please type exact information about show.</p>
 
-    <?php if($data['error'] != "") { ?>
+    <?php if($data != null && $data['error'] != "") { ?>
         <div class="errortext">
             <?= $data['error'] ?>
         </div>
@@ -15,7 +15,7 @@
 
     <form name="createform" class="contactform" method="post" action="?c=Show&a=createshow">
         <label class="login-label">
-            <input class="w3-input w3-border login-line" type="text" placeholder="Title" required name="title">
+            <input class="w3-input w3-border login-line" type="text" placeholder="Title" name="title">
         </label>
         <label>
             <input class="w3-input w3-border login-line" type="text" placeholder="Location" required name="location">

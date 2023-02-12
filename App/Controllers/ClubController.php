@@ -68,6 +68,7 @@ class ClubController extends AControllerBase
             }
         }
 
+        $data = ['success' => 'Success.'];
         return $this->html($data, "createclub");
     }
 
