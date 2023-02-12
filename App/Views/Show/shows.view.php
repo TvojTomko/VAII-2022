@@ -1,7 +1,9 @@
 <?php
-/** @var \App\Models\Show[] $data */
+/** @var Show[] $data */
 /** @var string $username  */
+
 use App\Controllers\Auth;
+use App\Models\Show;
 
 $username = Auth::getName()
 ?>
