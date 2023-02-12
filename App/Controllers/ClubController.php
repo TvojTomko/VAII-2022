@@ -124,6 +124,8 @@ class ClubController extends AControllerBase
                 $post->setNumberOfDogs($data["number_of_dogs"]);
                 $post->setBreed($data["breed"]);
                 $post->save();
+
+                return $this->redirect("?c=club");
             }
         }
         return $this->html($post, "editclub");
