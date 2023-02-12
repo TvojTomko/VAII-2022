@@ -61,14 +61,17 @@ $username = Auth::getName();
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar" onclick="w3_open()">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
     <a href="?c=Home&a=about" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-circle-info"></i> ABOUT</a>
-    <a href="?c=Home&a=clubs" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-paw"></i> CLUBS</a>
+    <a href="?c=Club&a=index" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-paw"></i> CLUBS</a>
     <a href="?c=Home&a=contact" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-solid fa-address-card"></i> CONTACT</a>
-    <a href="?c=Home&a=shows" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-star"></i> SHOWS</a>
+    <a href="?c=Show&a=index" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-star"></i> SHOWS</a>
     <?php if(!Auth::isLogged()) { ?>
         <a href="?c=auth&a=loginpage" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa-sharp fa-solid fa-key"></i> LOGIN</a>
     <?php } else { ?>
         <br>
         <a onclick="w3_close()" class="w3-bar-item w3-button"><?php echo $username ?></a>
+        <?php if ($username == "admin") { ?>
+            <a href="?c=Breed&a=createbreed" class="dropmenubtn"><i class="fa-solid fa-plus"></i> ADD BREED</a>
+        <?php } ?>
         <a href="?c=auth&a=changepasswordpage" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-edit mvr"></i> CHANGE PASSWORD</a>
         <a href="?c=auth&a=deleteuserpage" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-user-minus mvr"></i> DELETE USER</a>
         <a href="?c=auth&a=logout" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-user-lock mvr"></i> LOGOUT</a>
