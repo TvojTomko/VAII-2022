@@ -36,8 +36,8 @@ $username = Auth::getName()
                             <th>Dog ID</th>
                             <th>Name</th>
                             <th>Birth</th>
-                            <th>Height[cm]</th>
-                            <th>Weight[kg]</th>
+                            <th>Height [cm]</th>
+                            <th>Weight [kg]</th>
                         </tr>
                         <?php foreach ($dogs as $dog) {
                             if ($dog->getClub() == $item->getId()) { ?>
@@ -50,13 +50,16 @@ $username = Auth::getName()
                         </tr>
                         <?php } } ?>
                     </table>
-                    <?php if(Auth::isAdmin()) { ?>
+                    <div class="<?php if (!Auth::isAdmin()) { ?> usermode <?php } ?>">
+                    <?php if(Auth::isLogged()) { ?>
                         <br>
                         <a href="?c=Dog&a=adddog&id=<?= $item->getId() ?>" class="admin_show_button_edit right">Add dog</a>
-                        <a href="?c=Club&a=editclub&id=<?= $item->getId() ?>" class="admin_show_button_edit right">Edit</a>
-                        <a href="#" class="admin_show_button_delete right" onclick="return confirmDeleteClub(<?=$item->getId()?>)">Delete</a>
-                        <br>
-                    <?php } ?>
+                        <?php if(Auth::isAdmin()) { ?>
+                            <a href="?c=Club&a=editclub&id=<?= $item->getId() ?>" class="admin_show_button_edit right">Edit</a>
+                            <a href="#" class="admin_show_button_delete right" onclick="return confirmDeleteClub(<?=$item->getId()?>)">Delete</a>
+                            <br>
+                        <?php } } ?>
+                    </div>
                 </div>
             <?php } ?>
         </div>

@@ -52,6 +52,18 @@ class BreedController extends AControllerBase
         return $this->redirect("?c=Breed");
     }
 
+    public function deletebreed() : Response
+    {
+        $id = $this->request()->getValue("id");
+        $post = Breed::getOne($id);
+        if ($post != null)
+        {
+            $post->delete();
+        }
+
+        return $this->redirect("?c=Breed");
+    }
+
     public function createbreed() : Response
     {
         return $this->html();
