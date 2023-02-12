@@ -109,7 +109,7 @@ class ClubController extends AControllerBase
                 echo "<div class='text-danger'>Date must not be empty</div><br>";
 
             }
-            elseif(!(strlen($number_of_dogs) > 0))
+            elseif(!($number_of_dogs >= 0))
             {
                 echo "<div class='text-danger'>Number of dogs must not be empty</div><br>";
             }

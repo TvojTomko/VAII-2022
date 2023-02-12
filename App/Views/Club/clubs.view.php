@@ -2,7 +2,10 @@
 /** @var Club[] $data */
 /** @var string $username  */
 
+
+
 use App\Controllers\Auth;
+use App\Models\Breed;
 use App\Models\Club;
 
 $username = Auth::getName()
@@ -25,7 +28,8 @@ $username = Auth::getName()
                     <br>
                     <label class="shows_text">Number of dogs:</label> <?=$item->getNumberOfDogs()?>
                     <br>
-                    <label class="shows_text lastline">Breed:</label> <?=$item->getBreed()?>
+                    <label class="shows_text lastline">Breed:</label>
+                    <a href="?c=Breed&a=breedinfo&id=<?= $item->getBreed() ?>"><?php echo Breed::getOne($item->getBreed())->getName() ?></a>
                     <?php if(Auth::isAdmin()) { ?>
                         <br>
                         <a href="?c=Dog&a=adddog&id=<?= $item->getId() ?>" class="admin_show_button_edit right">Add dog</a>
@@ -34,7 +38,7 @@ $username = Auth::getName()
                         <br>
                     <?php } ?>
                 </div>
-            <?php }?>
+            <?php } ?>
         </div>
         <?php if(Auth::isAdmin()) { ?>
             <a href="?c=Club&a=createclubpage" class="admin_show_button_create">Create club</a>

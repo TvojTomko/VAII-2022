@@ -49,11 +49,16 @@ class BreedController extends AControllerBase
             }
         }
 
-        return $this->html(new Breed(), "createbreed");
+        return $this->redirect("?c=Breed");
     }
 
-    public function createbreed(): Response
+    public function createbreed() : Response
     {
         return $this->html();
+    }
+
+    public function breedinfo() : Response
+    {
+        return $this->html($this->request()->getValue("id"));
     }
 }
