@@ -30,17 +30,17 @@ class ShowController extends AControllerBase
             if (!(strlen($title) > 0))
             {
                 $data = ['error' => 'Title must not be empty.'];
-                return $this->html($data);
+                return $this->html($data, "createshow");
             }
             else if (!(strlen($location) > 0))
             {
                 $data = ['error' => 'Location must not be empty.'];
-                return $this->html($data);
+                return $this->html($data, "createshow");
             }
             else if (!(strlen($date) > 0))
             {
                 $data = ['error' => 'Date must not be empty.'];
-                return $this->html($data);
+                return $this->html($data, "createshow");
             }
             else {
                 $post = new Show();
@@ -48,15 +48,13 @@ class ShowController extends AControllerBase
                 $post->setLocation($data["location"]);
                 $post->setDate($data["date"]);
                 $post->save();
+
+                return $this->redirect("?c=Show");
             }
         }
 
         $data = ['success' => 'Success.'];
-        return $this->html(
-            [
-                new Show()
-            ]
-        );
+        return $this->html($data, "createshow");
     }
 
     public function deleteshow() : Response

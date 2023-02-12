@@ -95,8 +95,6 @@ $username = Auth::getName();
         <i class="fa-brands fa-tiktok sm-opacity"></i>
     </div>
 </footer>
-
 <script src="/checkpoint2/public/js/root.js"></script>
-
 </body>
 </html>

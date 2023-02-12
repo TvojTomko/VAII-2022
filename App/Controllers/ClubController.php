@@ -32,7 +32,7 @@ class ClubController extends AControllerBase
 
             if (!(strlen($title) > 0))
             {
-                $data = ['error' => 'Owner must not be empty.'];
+                $data = ['error' => 'Title must not be empty.'];
                 //echo "<div class='text-danger'>Title must not be empty</div><br>";
                 return $this->html($data);
             }
