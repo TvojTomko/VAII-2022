@@ -17,16 +17,16 @@ use App\Models\Club;
     <!--    --><?php //} ?>
 
     <form name="createform" class="contactform" method="post" action="?c=Dog&a=adddog">
-        <label class="login-label">
+        <label>
             <input class="w3-input w3-border login-line" type="text" placeholder="Name" required name="name">
         </label>
         <label>
             <input class="w3-input w3-border login-line" type="date" placeholder="Birth" required name="birth">
         </label>
-        <label class="login-label">
+        <label>
             <input class="w3-input w3-border login-line" type="number" placeholder="Height[cm]" required name="height">
         </label>
-        <label class="login-label">
+        <label>
             <input class="w3-input w3-border login-line" type="number" placeholder="Weight[kg]" required name="weight">
         </label>
         <button class="button-menu mygrey-text login-button" type="submit">
