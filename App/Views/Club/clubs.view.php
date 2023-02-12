@@ -1,13 +1,14 @@
 <?php
 /** @var Club[] $data */
+/** @var Dog[] $dogs */
 /** @var string $username  */
-
-
 
 use App\Controllers\Auth;
 use App\Models\Breed;
 use App\Models\Club;
+use App\Models\Dog;
 
+$dogs = Dog::getAll();
 $username = Auth::getName()
 ?>
 <div class="w3-container section">
@@ -30,6 +31,25 @@ $username = Auth::getName()
                     <br>
                     <label class="shows_text lastline">Breed:</label>
                     <a href="?c=Breed&a=breedinfo&id=<?= $item->getBreed() ?>"><?php echo Breed::getOne($item->getBreed())->getName() ?></a>
+                    <table class="dogtable">
+                        <tr>
+                            <th>Dog ID</th>
+                            <th>Name</th>
+                            <th>Birth</th>
+                            <th>Height[cm]</th>
+                            <th>Weight[kg]</th>
+                        </tr>
+                        <?php foreach ($dogs as $dog) {
+                            if ($dog->getClub() == $item->getId()) { ?>
+                        <tr class="dogtable-row">
+                            <td><?= $dog->getId() ?></td>
+                            <td><?= $dog->getName() ?></td>
+                            <td><?= $dog->getBirth() ?></td>
+                            <td><?= $dog->getHeight() ?></td>
+                            <td><?= $dog->getWeight() ?></td>
+                        </tr>
+                        <?php } } ?>
+                    </table>
                     <?php if(Auth::isAdmin()) { ?>
                         <br>
                         <a href="?c=Dog&a=adddog&id=<?= $item->getId() ?>" class="admin_show_button_edit right">Add dog</a>

@@ -6,6 +6,7 @@ use App\Core\AControllerBase;
 use App\Core\Responses\Response;
 use App\Models\Breed;
 use App\Models\Club;
+use App\Models\Dog;
 
 class ClubController extends AControllerBase
 {
