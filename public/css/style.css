@@ -574,4 +574,13 @@ th {
     .lens {
         opacity: 0;
     }
+    .about-breed-bg {
+        height: 160px;
+    }
+    .about-breed-text {
+        font-size: 15px;
+    }
+    .allbreed-button {
+        font-size: 13px;
+    }
 }
