@@ -11,7 +11,7 @@ use App\Models\Show;
 
     <form name="editform" class="contactform" method="post" action="?c=Show&a=editshow">
         <label class="login-label">
-            <input class="w3-input w3-border login-line" type="text" placeholder="Title" required name="title" value="<?= $data->getTitle() ?>">
+            <input class="w3-input w3-border login-line" type="text" placeholder="Title" name="title" value="<?= $data->getTitle() ?>">
         </label>
         <label>
             <input class="w3-input w3-border login-line" type="text" placeholder="Location" required name="location" value="<?= $data->getLocation() ?>">

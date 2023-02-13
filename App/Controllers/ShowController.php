@@ -68,7 +68,6 @@ class ShowController extends AControllerBase
             $data = ['delete' => 'Item ' . $name .' was deleted.', 'success' => ''];
         }
 
-
         return $this->html($data, "shows");
     }
 
@@ -84,28 +83,34 @@ class ShowController extends AControllerBase
             $location = $_POST['location'];
             $date = $_POST['date'];
 
-            if(!(strlen($title) > 0) || !(strlen($title) < 100))
+            if(!(strlen($title) > 0))
             {
-                echo "<div class='text-danger'>Title must not be empty</div><br>";
-
+                echo "<div>Title must not be empty</div><br>";
+                return $this->redirect("?c=Show&a=editshow&id=" . $id);
             }
             elseif(!(strlen($location) > 0))
             {
-                echo "<div class='text-danger'>Location must not be empty</div><br>";
-
+                echo "<div>Location must not be empty</div><br>";
+                return $this->redirect("?c=Show&a=editshow&id=". $id);
             }
             elseif(!(strlen($date) > 0))
             {
-                echo "<div class='text-danger'>Date must not be empty</div><br>";
+                echo "<div>Date must not be empty</div><br>";
+                return $this->redirect("?c=Show&a=editshow&id=". $id);
 
             } else {
                 $post->setTitle($data["title"]);
                 $post->setLocation($data["location"]);
                 $post->setDate($data["date"]);
                 $post->save();
+
+                $name = $post->getTitle();
+                $data = ['success' => 'Edit ' . $name . ' was successful.', 'delete' => ''];
+                return $this->html($data, "shows");
                 }
             }
 
+        //$data = ['success' => '', 'delete' => ''];
         return $this->html($post,"editshow");
     }
 
