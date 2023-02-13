@@ -32,12 +32,10 @@ $username = Auth::getName()
     <?php } ?>
 
     <div class="searchline">
-        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" onkeyup="filterShows(this.value)" />
-        <span class="input-group-text border-0" id="search-addon">
-            <i class="fas fa-search"></i>
-        </span>
+        <input type="search" placeholder="Search" onkeyup="filterShows(this.value)" />
+        <i class="fas fa-search lens"></i>
     </div>
-    <div id="show">
+    <div class="showss" id="show">
 
     </div>
         <?php if(Auth::isAdmin()) { ?>
