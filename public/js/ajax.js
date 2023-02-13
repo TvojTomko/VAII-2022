@@ -12,8 +12,7 @@ function displayShows(filtredProducts) {
 
     for(let shows of filtredProducts){
         const showElement = document.createElement('show.title');
-        //showElement.classList.add("login");
-        //showElement.classList.add("card");
+        //showElement.classList.add("");
         showElement.innerHTML = `    
                     <div class="shows">
                     <img alt="fci" src="/checkpoint2/public/images/FCI_logo.png" class="logo">

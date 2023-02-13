@@ -11,7 +11,7 @@ class BreedController extends AControllerBase
 
     public function index(): Response
     {
-        $data = ['breed' => Breed::getAll(), 'success' => '', 'delete' => ''];
+        $data = ['success' => '', 'delete' => ''];
         return $this->html($data, "breed");
     }
     public function createbreeds() : Response
@@ -65,8 +65,10 @@ class BreedController extends AControllerBase
             $name = $post->getName();
             $post->delete();
             $data = ['delete' => 'Breed ' . $name . ' was deleted.', 'success' => '' ];
+            return $this->html($data, 'breed');
         }
 
+        $data = ['delete' => '', 'success' => '' ];
         return $this->html($data, 'breed');
     }
 
@@ -82,7 +84,7 @@ class BreedController extends AControllerBase
 
     public function refresh() : Response
     {
-        $data = ['breed' => Breed::getAll(), 'success' => '', 'delete' => ''];
+        $data = ['success' => '', 'delete' => ''];
         return $this->html($data, "breed");
     }
 }
