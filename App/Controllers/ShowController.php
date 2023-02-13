@@ -66,8 +66,10 @@ class ShowController extends AControllerBase
             $name = $post->getTitle();
             $post->delete();
             $data = ['delete' => 'Item ' . $name .' was deleted.', 'success' => ''];
+            return $this->html($data, "shows");
         }
 
+        $data = ['delete' => '', 'success' => ''];
         return $this->html($data, "shows");
     }
 

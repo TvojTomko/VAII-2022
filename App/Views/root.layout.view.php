@@ -43,7 +43,9 @@ $username = Auth::getName();
                             <a href="?c=Breed&a=createbreed" class="dropmenubtn"><i class="fa-solid fa-plus"></i> ADD BREED</a>
                         <?php } ?>
                         <a href="?c=auth&a=changepasswordpage" class="dropmenubtn"><i class="fas fa-edit mvr"></i> CHANGE PASSWORD</a>
+                        <?php if ($username != "admin") { ?>
                         <a href="?c=auth&a=deleteuserpage" class="dropmenubtn"><i class="fas fa-user-minus mvr"></i> DELETE USER</a>
+                        <?php } ?>
                         <a href="?c=auth&a=logout" class="dropmenubtn"><i class="fas fa-user-lock mvr"></i> LOGOUT</a>
                     </div>
                 </div>
@@ -73,7 +75,9 @@ $username = Auth::getName();
             <a href="?c=Breed&a=createbreed" class="dropmenubtn"><i class="fa-solid fa-plus"></i> ADD BREED</a>
         <?php } ?>
         <a href="?c=auth&a=changepasswordpage" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-edit mvr"></i> CHANGE PASSWORD</a>
+        <?php if ($username != "admin") { ?>
         <a href="?c=auth&a=deleteuserpage" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-user-minus mvr"></i> DELETE USER</a>
+        <?php } ?>
         <a href="?c=auth&a=logout" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fas fa-user-lock mvr"></i> LOGOUT</a>
     <?php } ?>
 </nav>

@@ -78,10 +78,13 @@ class ClubController extends AControllerBase
         $post = Club::getOne($id);
         if ($post != null)
         {
+            $name = $post->getTitle();
             $post->delete();
+            $data = ['success' => '', 'delete' => 'Club ' . $name . ' was deleted.'];
+            return $this->html($data, "clubs");
         }
 
-        $data = ['success' => '', 'delete' => 'Club was deleted.'];
+        $data = ['success' => '', 'delete' => ''];
         return $this->html($data, "clubs");
     }
 
@@ -102,25 +105,27 @@ class ClubController extends AControllerBase
             if(!(strlen($title) > 0))
             {
                 echo "<div class='text-danger'>Title must not be empty</div><br>";
-
+                return $this->redirect("?c=Club&a=editclub&id=" . $id);
             }
             elseif(!(strlen($owner) > 0))
             {
                 echo "<div class='text-danger'>Location must not be empty</div><br>";
-
+                return $this->redirect("?c=Club&a=editclub&id=" . $id);
             }
             elseif(!(strlen($since) > 0))
             {
                 echo "<div class='text-danger'>Date must not be empty</div><br>";
-
+                return $this->redirect("?c=Club&a=editclub&id=" . $id);
             }
             elseif(!($number_of_dogs >= 0))
             {
                 echo "<div class='text-danger'>Number of dogs must not be empty</div><br>";
+                return $this->redirect("?c=Club&a=editclub&id=" . $id);
             }
             elseif(!(strlen($breed) > 0))
             {
                 echo "<div class='text-danger'>Breed must not be empty</div><br>";
+                return $this->redirect("?c=Club&a=editclub&id=" . $id);
             }
             else {
                 $post->setTitle($data["title"]);
@@ -130,9 +135,13 @@ class ClubController extends AControllerBase
                 $post->setBreed($data["breed"]);
                 $post->save();
 
-                return $this->redirect("?c=club");
+                $name = $post->getTitle();
+                $data = ['success' => 'Edit ' . $name . ' was successful.', 'delete' => ''];
+                return $this->html($data, "clubs");
             }
         }
+
+        //$data = ['success' => '', 'delete' => ''];
         return $this->html($post, "editclub");
     }
 
