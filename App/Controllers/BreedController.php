@@ -11,8 +11,7 @@ class BreedController extends AControllerBase
 
     public function index(): Response
     {
-        $breeds = Breed::getAll();
-        return $this->html($breeds, "breed");
+        return $this->html();
     }
     public function createbreeds() : Response
     {
@@ -46,10 +45,14 @@ class BreedController extends AControllerBase
                 $post->setSection($data["section"]);
                 $post->setCountry($data["country"]);
                 $post->save();
+
+                $data = ['success' => 'Breed was created.'];
+                return $this->html($data, "breed");
             }
         }
 
-        return $this->redirect("?c=Breed");
+        $data = ['success' => ''];
+        return $this->html($data, "breed");
     }
 
     public function deletebreed() : Response

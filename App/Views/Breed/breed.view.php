@@ -1,10 +1,12 @@
 <?php
-/** @var Breed[] $data */
+/** @var Array $data */
+/** @var Breed[] $breeds */
 /** @var string $username  */
 
 use App\Controllers\Auth;
 use App\Models\Breed;
 
+$breeds = Breed::getAll();
 $username = Auth::getName()
 ?>
 
@@ -13,8 +15,13 @@ $username = Auth::getName()
         <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Breeds</h1>
         <p class="w3-center w3-large">List of our official registered breeds</p>
     </div>
+    <?php if($data != null && $data['success'] != "") { ?>
+        <div class="successtext">
+            <?= $data['success'] ?>
+        </div>
+    <?php } ?>
         <div>
-            <?php foreach ($data as $item) { ?>
+            <?php foreach ($breeds as $item) { ?>
                 <div class="shows" id="breedslist">
                     <img src="/checkpoint2/public/images/paw.jpg" class="logo">
                     <label class="shows_text">Name:</label> <?=$item->getName()?>

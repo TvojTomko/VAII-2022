@@ -7,11 +7,11 @@
     <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Create new breed</h1>
     <p class="center-text">Please type exact information new dog breed.</p>
 
-<!--    --><?php //if($data['error'] != "") { ?>
-<!--        <div class="errortext">-->
-<!--            --><?php //= $data['error'] ?>
-<!--        </div>-->
-<!--    --><?php //} ?>
+    <?php if($data != null && $data['error'] != "") { ?>
+        <div class="errortext">
+            <?= $data['error'] ?>
+        </div>
+    <?php } ?>
 
     <form name="createform" class="contactform" method="post" action="?c=Breed&a=createbreeds">
         <label class="login-label">
