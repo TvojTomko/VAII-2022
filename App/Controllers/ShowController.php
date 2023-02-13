@@ -63,10 +63,12 @@ class ShowController extends AControllerBase
         $post = Show::getOne($id);
         if ($post != null)
         {
+            $name = $post->getTitle();
             $post->delete();
+            $data = ['delete' => 'Item ' . $name .' was deleted.', 'success' => ''];
         }
 
-        $data = ['delete' => 'Item was deleted.', 'success' => ''];
+
         return $this->html($data, "shows");
     }
 
