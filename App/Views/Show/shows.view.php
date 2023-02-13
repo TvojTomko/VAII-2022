@@ -10,9 +10,11 @@ $shows = Show::getAll();
 $username = Auth::getName()
 ?>
 
+<script src="/checkpoint2/public/js/ajax.js"></script>
+
 <!-- Shows section -->
 <div class="w3-container section">
-    <div class="w3-container" id="show">
+    <div class="w3-container">
         <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Shows</h1>
         <p class="w3-center w3-large">List of upcoming shows</p>
     </div>
@@ -29,26 +31,17 @@ $username = Auth::getName()
         </div>
     <?php } ?>
 
-    <form>
-        <div>
-            <?php foreach ($shows as $item) { ?>
-                <div class="shows">
-                    <img alt="fci" src="/checkpoint2/public/images/FCI_logo.png" class="logo">
-                    <label class="shows_text">Title:</label> <?=$item->getTitle()?>
-                    <br>
-                    <label class="shows_text">Location:</label> <?=$item->getLocation()?>
-                    <br>
-                    <label class="shows_text">Date:</label> <?=$item->getDate()?>
-                    <?php if(Auth::isAdmin()) { ?>
-                        <a href="?c=Show&a=editshow&id=<?= $item->getId() ?>" class="admin_show_button_edit right">Edit</a>
-                        <a href="#" class="admin_show_button_delete right" onclick="return confirmDeleteShow(<?=$item->getId()?>)">Delete</a>
-                    <?php }?>
-                </div>
-            <?php }?>
-        </div>
+    <div class="searchline">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" onkeyup="filterShows(this.value)" />
+        <span class="input-group-text border-0" id="search-addon">
+            <i class="fas fa-search"></i>
+        </span>
+    </div>
+    <div id="show">
+
+    </div>
         <?php if(Auth::isAdmin()) { ?>
             <a href="?c=Show&a=createshowspage" class="admin_show_button_create">Create</a>
             <label class="right admin_text">Admin is logged in</label>
         <?php }?>
-    </form>
 </div>

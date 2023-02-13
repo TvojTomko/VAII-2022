@@ -11,7 +11,8 @@ class BreedController extends AControllerBase
 
     public function index(): Response
     {
-        return $this->html(null, "breed");
+        $data = ['breed' => Breed::getAll(), 'success' => '', 'delete' => ''];
+        return $this->html($data, "breed");
     }
     public function createbreeds() : Response
     {
@@ -77,5 +78,11 @@ class BreedController extends AControllerBase
     public function breedinfo() : Response
     {
         return $this->html($this->request()->getValue("id"));
+    }
+
+    public function refresh() : Response
+    {
+        $data = ['breed' => Breed::getAll(), 'success' => '', 'delete' => ''];
+        return $this->html($data, "breed");
     }
 }

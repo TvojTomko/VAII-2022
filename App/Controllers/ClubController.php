@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Core\AControllerBase;
+use App\Core\Responses\JsonResponse;
+use App\Core\Responses\RedirectResponse;
 use App\Core\Responses\Response;
 use App\Models\Breed;
 use App\Models\Club;
@@ -148,5 +150,16 @@ class ClubController extends AControllerBase
     public function createclubpage() : Response
     {
         return $this->html(null, "createclub");
+    }
+
+    public function getJson() : JsonResponse
+    {
+        $data = Club::getAll();
+        return $this->json($data);
+    }
+
+    public function refresh() : Response
+    {
+        return $this->html(null, "clubs");
     }
 }

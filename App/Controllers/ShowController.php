@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\AControllerBase;
+use App\Core\Responses\JsonResponse;
 use App\Core\Responses\RedirectResponse;
 use App\Core\Responses\Response;
 use App\Models\Show;
@@ -124,5 +125,17 @@ class ShowController extends AControllerBase
     public function editshowpage() : Response
     {
         return $this->html(null, "editshow");
+    }
+
+    public function getJson() : JsonResponse
+    {
+        $data = Show::getAll();
+        return $this->json($data);
+    }
+
+    public function refresh() : Response
+    {
+        $data = Show::getAll();
+        return $this->html($data, "shows");
     }
 }

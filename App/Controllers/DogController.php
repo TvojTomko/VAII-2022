@@ -12,7 +12,7 @@ class DogController extends AControllerBase
 
     public function index(): Response
     {
-        return $this->html();
+        return $this->html(null, "alldogs");
     }
 
     public function adddog() : Response
@@ -81,5 +81,10 @@ class DogController extends AControllerBase
         }
 
         return $this->redirect("?c=club");
+    }
+
+    public function alldogspage() : Response
+    {
+        return $this->html(null, "alldogs");
     }
 }

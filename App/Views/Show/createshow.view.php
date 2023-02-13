@@ -14,7 +14,7 @@
     <?php } ?>
 
     <form name="createform" class="contactform" method="post" action="?c=Show&a=createshow">
-        <label class="login-label">
+        <label>
             <input class="w3-input w3-border login-line" type="text" placeholder="Title" required name="title">
         </label>
         <label>

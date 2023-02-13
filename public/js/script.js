@@ -16,4 +16,9 @@ function confirmDeleteBreed(id) {
     }
     return false;
 }
-// AJAX
+function confirmDeleteDog(id) {
+    if (confirm("Are you sure you want to delete this item?")) {
+        window.location.href = "?c=dog&a=deletedog&id=" + id;
+    }
+    return false;
+}
