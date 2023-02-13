@@ -18,6 +18,19 @@ $username = Auth::getName()
         <h1 class="title"><i class="fa-solid fa-paw w3-jumbo"></i><br>Clubs</h1>
         <p class="w3-center w3-large">List of our official registered clubs</p>
     </div>
+
+    <?php if($data != null && $data['success'] != "") { ?>
+        <div class="successtext">
+            <?= $data['success'] ?>
+        </div>
+    <?php } ?>
+
+    <?php if($data != null && $data['delete'] != "") { ?>
+        <div class="successtext">
+            <?= $data['delete'] ?>
+        </div>
+    <?php } ?>
+
     <form>
         <div>
             <?php foreach ($clubs as $item) { ?>

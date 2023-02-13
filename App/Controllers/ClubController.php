@@ -13,8 +13,7 @@ class ClubController extends AControllerBase
 
     public function index(): Response
     {
-        $clubs = Club::getAll();
-        return $this->html($clubs, "clubs");
+        return $this->html(null, "clubs");
     }
 
     public function createclub() : Response
@@ -33,28 +32,27 @@ class ClubController extends AControllerBase
             if (!(strlen($title) > 0))
             {
                 $data = ['error' => 'Title must not be empty.'];
-                //echo "<div class='text-danger'>Title must not be empty</div><br>";
-                return $this->html($data);
+                return $this->html($data, "createclub");
             }
             else if (!(strlen($owner) > 0))
             {
                 $data = ['error' => 'Owner must not be empty.'];
-                return $this->html($data);
+                return $this->html($data, "createclub");
             }
             else if (!(strlen($since) > 0))
             {
                 $data = ['error' => 'Since must not be empty.'];
-                return $this->html($data);
+                return $this->html($data, "createclub");
             }
             else if (!($number_of_dogs >= 0))
             {
                 $data = ['error' => 'Enter a valid number of dogs.'];
-                return $this->html($data);
+                return $this->html($data, "createclub");
             }
             else if (!($breed >= 0))
             {
                 $data = ['error' => 'Enter a valid breed_id.'];
-                return $this->html($data);
+                return $this->html($data, "createclub");
             }
             else {
                 $post = new Club();
@@ -64,11 +62,13 @@ class ClubController extends AControllerBase
                 $post->setNumberOfDogs($data["number_of_dogs"]);
                 $post->setBreed($data["breed"]);
                 $post->save();
-                return $this->redirect("?c=club");
+
+                $data = ['success' => 'Club was created.', 'delete' => ''];
+                return $this->html($data, "clubs");
             }
         }
 
-        $data = ['success' => 'Success.'];
+        $data = ['success' => ''];
         return $this->html($data, "createclub");
     }
 
@@ -81,7 +81,8 @@ class ClubController extends AControllerBase
             $post->delete();
         }
 
-        return $this->redirect("?c=club");
+        $data = ['success' => '', 'delete' => 'Club was deleted.'];
+        return $this->html($data, "clubs");
     }
 
     public function editclub() : Response
@@ -137,13 +138,6 @@ class ClubController extends AControllerBase
 
     public function createclubpage() : Response
     {
-        $breeds = Breed::getAll();
-        return $this->html($breeds, "createclub");
-    }
-
-    public function refreshclubpage() : Response
-    {
-        $clubs = Club::getAll();
-        return $this->html($clubs, "clubs");
+        return $this->html(null, "createclub");
     }
 }
