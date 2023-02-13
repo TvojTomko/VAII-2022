@@ -7,11 +7,11 @@ async function getBreed() {
             document.getElementById('breed').innerHTML = this.responseText;
         }
     }
-    xmlHttp.open("GET", "?c=breed&a=refresh", true);
+    xmlHttp.open("GET", "?c=breed&a=refreshbreed", true);
     xmlHttp.send();
     //setTimeout(getBreed, 10000);
 }
-//window.onload = getBreed();
+window.onload = getBreed();
 
 //getBreed();
 

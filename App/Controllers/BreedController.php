@@ -11,8 +11,8 @@ class BreedController extends AControllerBase
 
     public function index(): Response
     {
-        $data = ['success' => '', 'delete' => ''];
-        return $this->html($data, "breed");
+        //$data = ['success' => '', 'delete' => ''];
+        return $this->html(null, "breed");
     }
     public function createbreeds() : Response
     {
@@ -47,13 +47,11 @@ class BreedController extends AControllerBase
                 $post->setCountry($data["country"]);
                 $post->save();
 
-                $data = ['success' => 'Breed was created.', 'delete' => ''];
-                return $this->html($data, "breed");
+                return $this->redirect("?c=Breed");
             }
         }
 
-        $data = ['success' => '', 'delete' => ''];
-        return $this->html($data, "breed");
+        return $this->redirect("?c=Breed");
     }
 
     public function deletebreed() : Response
@@ -62,14 +60,10 @@ class BreedController extends AControllerBase
         $post = Breed::getOne($id);
         if ($post != null)
         {
-            $name = $post->getName();
             $post->delete();
-            $data = ['delete' => 'Breed ' . $name . ' was deleted.', 'success' => '' ];
-            return $this->html($data, 'breed');
         }
 
-        $data = ['delete' => '', 'success' => '' ];
-        return $this->html($data, 'breed');
+        return $this->redirect("?c=Breed");
     }
 
     public function createbreed() : Response
@@ -82,9 +76,10 @@ class BreedController extends AControllerBase
         return $this->html($this->request()->getValue("id"));
     }
 
-    public function refresh() : Response
+    public function refreshbreed() : Response
     {
-        $data = ['success' => '', 'delete' => ''];
-        return $this->html($data, "breed");
+        $data = Breed::getAll();
+        //$data = ['breeds' => Breed::getAll(),'success' => '', 'delete' => ''];
+        return $this->html($data);
     }
 }
