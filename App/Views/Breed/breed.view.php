@@ -20,6 +20,12 @@ $username = Auth::getName()
             <?= $data['success'] ?>
         </div>
     <?php } ?>
+
+    <?php if($data != null && $data['delete'] != "") { ?>
+        <div class="successtext">
+            <?= $data['delete'] ?>
+        </div>
+    <?php } ?>
         <div>
             <?php foreach ($breeds as $item) { ?>
                 <div class="shows" id="breedslist">
@@ -29,10 +35,10 @@ $username = Auth::getName()
                     <label class="shows_text">Section:</label> <?=$item->getSection()?>
                     <br>
                     <label class="shows_text">Country:</label> <?=$item->getCountry()?>
+                    <?php if(Auth::isAdmin()) { ?>
+                        <a href="#" class="admin_show_button_delete right" onclick="return confirmDeleteBreed(<?=$item->getId()?>)">Delete</a>
+                    <?php }?>
                 </div>
             <?php }?>
         </div>
-        <?php if(Auth::isAdmin()) { ?>
-
-        <?php }?>
 </div>
