@@ -30,7 +30,7 @@ $username = Auth::getName();
             </div>
         <?php } ?>
         <div>
-            <a href="#" onclick="return getBreed()">asdadsad</a>
+            <a href="#" class="admin_show_button_create" onclick="return getBreed()"><i class="fa-solid fa-arrows-rotate"></i>Refresh</a>
         </div>
         <div>
             <?php foreach ($breeds as $item) { ?>

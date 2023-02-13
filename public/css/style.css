@@ -359,7 +359,7 @@ footer {
 .shows {
     border: 1px black solid;
     padding: 15px 10px 30px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 .shows_text {
     margin-top: 10px;
@@ -415,7 +415,6 @@ footer {
     text-align: center;
     font-size: 18px;
     text-decoration: none;
-    margin: 5px 5px 5px 5px;
 }
 
 .admin_show_button_create:hover {
