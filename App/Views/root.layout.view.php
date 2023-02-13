@@ -98,7 +98,9 @@ $username = Auth::getName();
         <i class="fa fa-twitter sm-opacity"></i>
         <i class="fa-brands fa-tiktok sm-opacity"></i>
     </div>
-    <a href="?c=Dog&a=alldogspage">blabla</a>
+    <?php if(!Auth::isLogged()) { ?>
+    <a href="?c=Dog&a=alldogspage">List of all dogs</a>
+    <?php } ?>
 </footer>
 <script src="/checkpoint2/public/js/root.js"></script>
 </body>
